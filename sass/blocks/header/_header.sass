@@ -1,0 +1,47 @@
+.header
+  width: 100%
+  padding: 28px 120px 28px 0px
+  margin: 0 auto
+  position: sticky
+  z-index: 99
+  display: flex
+  justify-content: flex-end
+.menu
+  margin: 0
+  padding: 0
+  &__items
+    margin: 0
+    padding: 0
+    list-style-type: none
+    display: flex
+  &__item
+    padding: 0
+    margin: 0 34px 0 0
+  &__item:last-child
+    margin: 0
+  &__link
+    text-decoration: none
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 18px
+    color: $color-header-text-day
+    cursor: pointer
+  &__link:hover
+    opacity: 0.6
+    transition: opacity 0.3s linear
+  &-button
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 22px
+    height: 22px
+    border: 0
+    background-color: transparent
+    margin: 0
+    padding: 0
+    &_visible
+      display: none
+    &__line
+      width: 100%
+      border: 2px solid $color-border-day
