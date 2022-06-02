@@ -12,13 +12,13 @@
       <nav class="menu">
         <ul class="menu__items menu__items_visible">
           <li class="menu__item">
-            <a href="" class="menu__link">Покрытия и градиенты</a>
+            <a href="#" class="menu__link">Покрытия и градиенты</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Велосипеды</a>
+            <a href="#" class="menu__link">Велосипеды</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Тренировки</a>
+            <a href="#" class="menu__link">Тренировки</a>
           </li>
         </ul>
         <button type="button" class="menu-button menu-button_visible">
@@ -30,20 +30,38 @@
     </header>
     <main>
       <!-- для открытия меню бургера на мобильных устройствах -->
-      <div class="container">
+      <section class="container">
         <button type="button" class="container__close"></button>
-        <ul class="container__items">
-          <li class="container__item">
-            <a href="" class="container__link">Покрытия и градиенты</a>
-          </li>
-          <li class="container__item">
-            <a href="" class="container__link">Велосипеды</a>
-          </li>
-          <li class="container__item">
-            <a href="" class="container__link">Тренировки</a>
-          </li>
-        </ul>
-      </div>
+        <div class="container-menu">
+          <ul class="container-menu__items">
+            <li class="container-menu__item">
+              <a href="#" class="container-menu__link">Покрытия и градиенты</a>
+            </li>
+            <li class="container-menu__item">
+              <a href="#" class="container-menu__link">Велосипеды</a>
+            </li>
+            <li class="container-menu__item">
+              <a href="#" class="container-menu__link">Тренировки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container-footer">
+          <img
+            src="./images/icons/suny-day.svg"
+            alt="Иконка: Солнышко"
+            class="container-footer__sun"
+          />
+          <button
+            type="button"
+            class="container-footer__btn container-footer__btn_on"
+          ></button>
+          <img
+            src="./images/icons/moonlight-night.png"
+            alt="Иконка: Луна"
+            class="container-footer__moon"
+          />
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
     <script src="./js/main.js" defer></script>
