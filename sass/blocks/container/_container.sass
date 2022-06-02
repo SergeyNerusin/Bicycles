@@ -7,7 +7,6 @@
   height: 100%
   margin: 0
   padding: 0
-  // background-color: tomato
   background-color: $color-background-day
   position: fixed
   top: 0
@@ -17,6 +16,9 @@
   z-index: 101
   opacity: 0
   visibility: hidden
+  transition: opacity 0.3s, visibility 0.3s
+  &_background-night
+    background-color: $color-background-night
   &_opened
     opacity: 1
     visibility: visible
@@ -38,24 +40,32 @@
     align-items: center
     justify-content: flex-start
     width: 100%
-    margin: 0
+    margin: 0 auto
     padding: 0
     &__items
+      w100%
       list-style-type: none
       margin: 0
       padding: 70px 0 0 0
     &__item
       padding: 0
+      text-align: center
       margin: 0 0 32px 0
     &__items:last-child
       margin-bottom: 0
     &__link
+      width: 100%
+      text-align: center
+      padding: 0
+      margin: 0
       text-decoration: none
       font-style: normal
       font-weight: 500
       font-size: 18px
       line-height: 18px
-      color: $color-header-text-day
+      color: $color-pararaph-text-day
+      &_night
+        color: $color-pararaph-text-night
   &-footer
     width: 100%
     margin: 0 0 38px 0
