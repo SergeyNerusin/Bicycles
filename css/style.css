@@ -1,11 +1,13 @@
 @charset "UTF-8";
 /* Здесь собираем стили */
 /* подключение переменных */
-/*цвет фона*/
-/*цвет текста шапки*/
-/*цвет текста параграфа*/
-/*меню бургер*/
-/*кнопка переключения фона*/
+/* цвет фона */
+/* цвет текста шапки */
+/* цвет текста заголовка */
+/* цвет текста параграфа */
+/* меню бургер */
+/* кнопка переключения фона */
+/*  */
 /* подключение normalize */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -406,6 +408,8 @@ template {
   margin: 0 auto;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
+  background-color: #F4F4F4;
   z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -658,6 +662,162 @@ template {
      object-position: center;
   padding: 0;
   margin: 0;
+}
+
+/* секция Шоссе, ТТ и Грэвел */
+.typestart {
+  width: 100%;
+  height: 100%;
+  min-height: 856px;
+  padding: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.typestart-info {
+  width: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0;
+  padding: 80px 0 209px 120px;
+}
+
+.typestart-info__title {
+  width: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+  padding: 0;
+  margin: 0 0 50px 0;
+}
+
+.typestart-info__paragraph {
+  width: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222222;
+  padding: 0;
+  margin: 0 0 50px 0;
+}
+
+.typestart-info__link {
+  width: 180px;
+  height: 50px;
+  background-color: #24B47E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 0;
+  margin: 0 0 167px 0;
+}
+
+.typestart-info__system {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.typestart-info__system-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #151515;
+  padding: 0;
+  margin: 0 20px 0 0;
+}
+
+.typestart-info__system-hatch {
+  width: 132px;
+  height: 2px;
+  border: 1px solid #D7D4D4;
+  background-color: #D7D4D4;
+  margin: 0;
+  padding: 0;
+}
+
+.typestart-info__foto-way {
+  display: block;
+  width: 610px;
+  height: 836px;
+  padding: 20px 0 0 0;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.typestart-info__limiter {
+  width: 810px;
+  height: 410px;
+  position: absolute;
+  bottom: 79px;
+  right: 0;
+  z-index: 1;
+}
+
+.typestart-info__foto-bike {
+  display: block;
+  width: 340px;
+  height: 260px;
+  padding: 20px 50px;
+  margin: 0;
+  background-color: #F4F4F4;
+  -webkit-box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+          box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  border-radius: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 347px;
+  z-index: 1;
 }
 
 /* подключение футера */
