@@ -1,0 +1,21 @@
+.traning {
+  width: 100%;
+  margin: 0;
+  padding: 150px 120px 120px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.traning__info-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+}
+/*# sourceMappingURL=traning.css.map */

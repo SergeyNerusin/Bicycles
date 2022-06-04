@@ -1126,6 +1126,104 @@ template {
           filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
 }
 
+/* секция Тренировки */
+.training {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 150px 120px 120px 120px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.training__info {
+  width: 460px;
+  min-height: 460px;
+  padding: 0;
+  margin: 0;
+}
+
+.training__info-title {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 50px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+}
+
+.training__info-paragraph {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 182px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222222;
+  opacity: 0.7;
+}
+
+.training__programs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.training__program {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0;
+  margin: 0 30px 0 0;
+}
+
+.training__program-link {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222222;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.training__program-link:hover {
+  opacity: 0.6;
+}
+
+.training__program:last-child {
+  margin: 0;
+}
+
+.training__foto {
+  display: block;
+  width: 580px;
+  height: 460px;
+  margin: 0;
+  padding: 0;
+}
+
 /* подключение футера */
 .footer {
   margin: 0;
