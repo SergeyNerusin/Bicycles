@@ -1,0 +1,71 @@
+.bike
+  margin: 0 auto
+  padding: 60px 120px
+  &__name
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin: 0 0 120px 0
+    &-title
+      width: 460px
+      font-style: normal
+      font-weight: 700
+      font-size: 55px
+      line-height: 60px
+      letter-spacing: -0.5px
+      color: $color-header-text-day
+      padding: 0
+      margin: 0
+    &-items
+      width: 100%
+      list-style-type: none
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      padding: 0
+      margin: 0
+    &-item
+      padding: 0
+      margin: 0 40px 0 0
+    &-item:last-child
+      margin: 0
+    &-link
+      text-decoration: none
+      font-style: normal
+      font-weight: 400
+      font-size: 18px
+      line-height: 28px
+      cursor: pointer
+      color: $color-link-day
+      opacity: 0.7
+      padding: 0
+      margin: 0
+      &_selected
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 28px
+        opacity: 1
+        color: $color-linkselected-day
+  &__systems
+    width: 100%
+    list-style-type: none
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  &__system
+    padding: 0
+    margin: 0 30px 0 0
+    &-foto
+      display: block
+      width: 340px
+      height: 340px
+      padding: 20px
+      margin: 0 0 22px 0
+      background-color: $color-background-day
+      border-radius: 20px
+      object-fit: cover
+      object-position: center
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06))

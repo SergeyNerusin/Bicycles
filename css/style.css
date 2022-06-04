@@ -7,7 +7,7 @@
 /* цвет текста параграфа */
 /* меню бургер */
 /* кнопка переключения фона */
-/*  */
+/* цвет ссылок  */
 /* подключение normalize */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -811,8 +811,12 @@ template {
   padding: 20px 50px;
   margin: 0;
   background-color: #F4F4F4;
-  -webkit-box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-          box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
   border-radius: 20px;
   position: -webkit-sticky;
   position: sticky;
@@ -908,6 +912,218 @@ template {
   line-height: 28px;
   color: #222222;
   opacity: 0.7;
+}
+
+/* секция Дороги */
+.road {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 60px 0 60px 120px;
+  margin: 0 auto;
+}
+
+.road__title {
+  width: 460px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 50px 0;
+}
+
+.road__paragraph {
+  width: 460px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #222222;
+  text-align: left;
+  opacity: 0.7;
+  margin: 0 0 80px 0;
+}
+
+.road__foto {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin: 0 0 67px 0;
+  position: relative;
+}
+
+.road__img {
+  display: block;
+  width: 650px;
+  height: 400px;
+}
+
+.road__sign {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  background-image: url("../images/icons/substrate-for-line.png");
+  background-repeat: no-repeat;
+}
+
+.road__sign-svg {
+  margin: 0;
+  padding: 12px 34px 12px 16px;
+}
+
+.road__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.road__button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #EBEBEB;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.road__button-prev {
+  background-image: url("../images/icons/arrow-prev.svg");
+  margin-right: 20px;
+}
+
+.road__button-next {
+  background-image: url("../images/icons/arrow-next.svg");
+}
+
+/* секция Велосипеды */
+.bike {
+  margin: 0 auto;
+  padding: 60px 120px;
+}
+
+.bike__name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 120px 0;
+}
+
+.bike__name-title {
+  width: 460px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+  padding: 0;
+  margin: 0;
+}
+
+.bike__name-items {
+  width: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.bike__name-item {
+  padding: 0;
+  margin: 0 40px 0 0;
+}
+
+.bike__name-item:last-child {
+  margin: 0;
+}
+
+.bike__name-link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+  color: #222222;
+  opacity: 0.7;
+  padding: 0;
+  margin: 0;
+}
+
+.bike__name-link_selected {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 1;
+  color: #151515;
+}
+
+.bike__systems {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bike__system {
+  padding: 0;
+  margin: 0 30px 0 0;
+}
+
+.bike__system-foto {
+  display: block;
+  width: 340px;
+  height: 340px;
+  padding: 20px;
+  margin: 0 0 22px 0;
+  background-color: #F4F4F4;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+          filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
 }
 
 /* подключение футера */
