@@ -7,18 +7,18 @@
     <title>Велосипеды</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="page">
-    <header class="header">
+  <body class="page page_color-bgc">
+    <header class="header header_color-bgc">
       <nav class="menu">
         <ul class="menu__items menu__items_visible">
           <li class="menu__item">
-            <a href="#" class="menu__link">Покрытия и градиенты</a>
+            <a href="#" class="menu__link text_color">Покрытия и градиенты</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Велосипеды</a>
+            <a href="#" class="menu__link text_color">Велосипеды</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Тренировки</a>
+            <a href="#" class="menu__link text_color">Тренировки</a>
           </li>
         </ul>
         <button type="button" class="menu-button menu-button_visible">
@@ -30,18 +30,20 @@
     </header>
     <main>
       <!-- для открытия меню бургера на мобильных устройствах -->
-      <section class="container">
+      <section class="container container_color-bgc">
         <button type="button" class="container__close"></button>
         <div class="container-menu">
           <ul class="container-menu__items">
             <li class="container-menu__item">
-              <a href="#" class="container-menu__link">Покрытия и градиенты</a>
+              <a href="#" class="container-menu__link text_color"
+                >Покрытия и градиенты</a
+              >
             </li>
             <li class="container-menu__item">
-              <a href="#" class="container-menu__link">Велосипеды</a>
+              <a href="#" class="container-menu__link text_color">Велосипеды</a>
             </li>
             <li class="container-menu__item">
-              <a href="#" class="container-menu__link">Тренировки</a>
+              <a href="#" class="container-menu__link text_color">Тренировки</a>
             </li>
           </ul>
         </div>
@@ -62,15 +64,17 @@
       <!-- Шоссе, ТТ и Грэвел -->
       <section class="typestart">
         <div class="typestart-info">
-          <h1 class="typestart-info__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
-          <p class="typestart-info__paragraph">
+          <h1 class="typestart-info__title text_color">
+            Шоссе, ТТ и&nbsp;Грэвел
+          </h1>
+          <p class="typestart-info__paragraph text_color-m">
             Триатлонные старты, горные серпантины или грейвел заезды по
             живописным маршрутам – нужно только определиться с выбором
             велосипеда и отправиться в путь.
           </p>
           <a href="#" class="typestart-info__link">Подробнее</a>
           <div class="typestart-info__system">
-            <span class="typestart-info__system-text"
+            <span class="typestart-info__system-text text_color"
               >Cannondale&nbsp;Systemsix</span
             >
             <span class="typestart-info__system-hatch"></span>
@@ -96,19 +100,19 @@
           alt="Фото: Холмы и дорога"
         />
         <div class="quote__info">
-          <p class="quote__info-text">
+          <p class="quote__info-text text_color">
             «Катайся много или мало, долго или коротко, как хочешь - но катайся»
           </p>
           <div class="quote__author">
-            <span class="quote__author-name">Эдди Меркс</span>
-            <span class="quote__author-profsport">Велогонщик</span>
+            <span class="quote__author-name text_color">Эдди Меркс</span>
+            <span class="quote__author-profsport text_color-l">Велогонщик</span>
           </div>
         </div>
       </section>
       <!-- секция Дороги -->
       <section class="road">
-        <h2 class="road__title">Шоссе</h2>
-        <p class="road__paragraph">
+        <h2 class="road__title text_color">Шоссе</h2>
+        <p class="road__paragraph text_color-l">
           На шоссейном велосипеде можно ездить по асфальту на разных градиентах:
           будь то горы или равнины. Гонки проходят в командном пелотоне, но
           тренироваться можно и самостоятельно.
@@ -142,18 +146,20 @@
       <!-- Секция Велосипеды -->
       <section class="bike">
         <div class="bike__name">
-          <h2 class="bike__name-title">Велосипеды</h2>
+          <h2 class="bike__name-title text_color">Велосипеды</h2>
           <ul class="bike__name-items">
             <li class="bike__name-item">
-              <a href="#" class="bike__name-link bike__name-link_selected"
+              <a
+                href="#"
+                class="bike__name-link bike__name-link_selected text_color"
                 >Шоссе</a
               >
             </li>
             <li class="bike__name-item">
-              <a href="#" class="bike__name-link">Грэвел</a>
+              <a href="#" class="bike__name-link text_color-l">Грэвел</a>
             </li>
             <li class="bike__name-item">
-              <a href="#" class="bike__name-link">ТТ</a>
+              <a href="#" class="bike__name-link text_color-l">ТТ</a>
             </li>
           </ul>
         </div>
@@ -164,7 +170,9 @@
               alt="Фото: велосипед"
               class="bike__system-foto"
             />
-            <span class="bike__system-name">Cervelo Caledonia-5</span>
+            <span class="bike__system-name text_color"
+              >Cervelo Caledonia-5</span
+            >
           </li>
           <li class="bike__system">
             <img
@@ -172,7 +180,9 @@
               alt="Фото: велосипед"
               class="bike__system-foto"
             />
-            <span class="bike__system-name">Cannondale Systemsix Himod</span>
+            <span class="bike__system-name text_color"
+              >Cannondale Systemsix Himod</span
+            >
           </li>
           <li class="bike__system">
             <img
@@ -180,25 +190,25 @@
               alt="Фото: велосипед"
               class="bike__system-foto"
             />
-            <span class="bike__system-name">Trek Domane SL-7</span>
+            <span class="bike__system-name text_color">Trek Domane SL-7</span>
           </li>
         </ul>
       </section>
       <!-- Секция Тренировки -->
       <section class="training">
         <div class="training__info">
-          <h2 class="training__info-title">Тренировки</h2>
-          <p class="training__info-paragraph">
+          <h2 class="training__info-title text_color">Тренировки</h2>
+          <p class="training__info-paragraph text_color-l">
             Чтобы найти маршрут для тренировки можно воспользоваться сервисом
             Komoot, а записать эти тренировки поможет приложение Strava, а также
             это приложение позволит построить тренировочный план.
           </p>
           <ul class="training__programs">
             <li class="training__program">
-              <a href="#" class="training__program-link">Strava</a>
+              <a href="#" class="training__program-link text_color">Strava</a>
             </li>
             <li class="training__program">
-              <a href="#" class="training__program-link">Komoot</a>
+              <a href="#" class="training__program-link text_color">Komoot</a>
             </li>
           </ul>
         </div>
@@ -209,7 +219,34 @@
         />
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer footer_color-bgc">
+      <h2 class="footer__title text_color">Подпишитесь на рассылку&nbsp;—</h2>
+      <input
+        class="footer__input input_color-bgc"
+        type="email"
+        name=""
+        id=""
+        placeholder="Ваш e-mail"
+      />
+      <div class="footer__wrapper">
+        <p class="footer__copyright text_color-f">
+          ©&nbsp;Road&nbsp;Club&nbsp;2021
+        </p>
+        <div class="footer__container">
+          <img
+            src="./images/icons/sun_theme-day.svg"
+            alt="Иконка: Солнышко"
+            class="footer__container-sun"
+          />
+          <button type="button" class="footer__container-btn"></button>
+          <img
+            src="./images/icons/moon_theme-day.svg"
+            alt="Иконка: Луна"
+            class="footer__container-moon"
+          />
+        </div>
+      </div>
+    </footer>
     <script src="./js/main.js" defer></script>
   </body>
 </html>
