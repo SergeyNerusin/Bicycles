@@ -971,6 +971,11 @@ template {
   padding: 12px 34px 12px 16px;
 }
 
+.road__sign-svggrevel {
+  margin: 0;
+  padding: 23px 34px 12px 16px;
+}
+
 .road__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1235,17 +1240,88 @@ template {
   color: #151515;
 }
 
-.footer__input {
+.footer__container-input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 360px;
   height: 50px;
   border: 1px solid rgba(199, 199, 199, 0.5);
   border-radius: 4px;
-  background-color: #EFEFEF;
   cursor: pointer;
-  padding: 11px 20px;
+  background-color: #EFEFEF;
+  padding: 11px 22px 11px 20px;
   margin: 0 0 100px 0;
+}
+
+.footer__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: calc(100% - 16px);
+  height: 100%;
+  padding: 0 10px 0 0;
+  margin: 0;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.footer__input:focus {
+  outline: none;
+}
+
+.footer__input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: inherit;
+}
+
+.footer__input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: inherit;
+}
+
+.footer__input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: inherit;
+}
+
+.footer__input::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: inherit;
+}
+
+.footer__button-submit {
+  display: none;
+  width: 16px;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__button-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  text-align: right;
+  color: #151515;
 }
 
 .footer__wrapper {

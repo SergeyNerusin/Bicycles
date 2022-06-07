@@ -14,16 +14,51 @@
     font-size: 24px
     line-height: 32px
     color: $color-title-text-day
-  &__input
+  &__container-input
     box-sizing: border-box
+    display: flex
     width: 360px
     height: 50px
     border: 1px solid rgba(199, 199, 199, 0.5)
     border-radius: 4px
-    background-color: $color-footer-bgc-day
     cursor: pointer
-    padding: 11px 20px
+    background-color: #EFEFEF
+    padding: 11px 22px 11px 20px
     margin: 0 0 100px 0
+  &__input
+    box-sizing: border-box
+    width: calc(100% - 16px)
+    height: 100%
+    padding: 0 10px 0 0
+    margin: 0
+    border: none
+    background-color: inherit
+    cursor: pointer
+    &:focus
+      outline: none
+    &::placeholder
+      font-style: normal
+      font-weight: 500
+      font-size: 13px
+      line-height: 28px
+      color: inherit
+  &__button
+    &-submit
+      display: none
+      width: 16px
+      height: 28px
+      border: none
+      background-color: transparent
+      cursor: pointer
+      padding: 0
+      margin: 0
+    &-text
+      font-style: normal
+      font-weight: 500
+      font-size: 13px
+      line-height: 28px
+      text-align: right
+      color: #151515
   &__wrapper
     padding: 0
     margin: 0
