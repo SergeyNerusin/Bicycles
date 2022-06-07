@@ -1243,6 +1243,7 @@ template {
   border: 1px solid rgba(199, 199, 199, 0.5);
   border-radius: 4px;
   background-color: #EFEFEF;
+  cursor: pointer;
   padding: 11px 20px;
   margin: 0 0 100px 0;
 }
