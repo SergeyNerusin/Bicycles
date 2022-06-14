@@ -22,16 +22,18 @@ const btnNext = document.querySelector('.road__button-next');
 /* Находим селектор футера */ 
 const footerColorbgc = document.querySelector('.footer_color-bgc');
 
-/*находим селектор поля ввода e-mail адреса*/
 /* Для установки светлой или тёмной темы */ 
 const inputColorbgc = footerColorbgc.querySelectorAll('.input_color-bgc'); 
-const emailInput = document.querySelector('.footer-form__input'); 
 
-/* находим селектор кнопки отправки */
-const btnSubmit = document.querySelector('.footer-form__btn-submit'); 
 
+/* находим селектор формы */
 const formInputEmail = document.querySelector('.footer-form');
 
+/*находим селектор поля ввода e-mail адреса*/
+const emailInput = formInputEmail.querySelector('.footer-form__input');
+
+/* находим селектор кнопки отправки */
+const btnSubmit = formInputEmail.querySelector('.footer-form__btn-submit');
 
 /* Находим селектор иконки - солнышко (в футере)*/
 const SunImgpage = footerColorbgc.querySelector('.footer__container-sun');
@@ -64,9 +66,9 @@ const SunImgmob = containerColorbgc.querySelector('.container-footer__sun');
 /* Находим селектор иконки - луна в контейнере с меню - для моб. устройств.*/
 const MoonImgmob = containerColorbgc.querySelector('.container-footer__moon');
 
-/* Счетчик переключений */ 
+/* Признак для переключения темы переключения */ 
 let sign = 1;
-let btnInputsign = 0;
+
 
 /*1. Функция добавления - удаления селектора */ 
 function toggleSelector(switcher, addClass) {
@@ -135,44 +137,39 @@ function toggleThemeColor(){
 
 // Функция вывода уведомления об отправке данных e-mail адреса 
 function getNotification(){
-  emailInput.value = "Спасибо! Ваш email отправлен";
+  emailInput.value = "Круто!";
   setTimeout(()=> {
     emailInput.value = "";
+    // убираем фокус 
+    document.activeElement.blur();
   }, 3000);
 }
 
-// Функция закрывает кнопку отпавки e-mail адреса 
-function setBtnNone(){
-  btnSubmit.style.display = "none";
-  btnInputsign = 0;
-}
-
-/* Функция отправки email адреса */
+/* функция обработки события submit */ 
 function submitEmail(evt) {
   evt.preventDefault();
-  if(btnInputsign === 1){
   getNotification();
-  setBtnNone();
-  }
+  btnSubmit.style.display="none";
+   
 }
 
-/* Функция валидации ввода e-mail адреса */ 
-function validateEmail(email){
-//регулярное выражение для проверки ввода email
-const regExp=/^[\.a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
-return regExp.test(email);
-}
+emailInput.addEventListener('focus', () => {
+  btnSubmit.style.display = "block";
+});
 
-/* Установка прослушивателя на ввод данных в поле вода для проверки на валидность e-mail */ 
-emailInput.addEventListener('keyup', () => {
-  const inputEmail = emailInput.value;
-  if(validateEmail(inputEmail) === true){
-    btnSubmit.style.display = "block";
-    btnInputsign = 1;
-  } else {
-    setBtnNone(); 
+emailInput.addEventListener('blur', () => {
+  btnSubmit.style.display = "none";
+  emailInput.value = "";
+});
+
+/* обработка нажатия на кнопку ок в инпуте */ 
+btnSubmit.addEventListener('mousedown', (evt) => {
+  if (document.activeElement === emailInput) {
+      evt.preventDefault();
   }
 });
+
+
 
 formInputEmail.addEventListener('submit', submitEmail);    
 

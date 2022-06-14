@@ -1,10 +1,17 @@
 .bike
+  box-sizing: border-box
+  width: 100%
   margin: 0 auto
   padding: 60px 120px
+  &__diagonal-line
+    display: none
+  &-selected
+    display: none
   &__name
     width: 100%
     display: flex
     justify-content: space-between
+    padding: 0
     margin: 0 0 120px 0
     &-title
       width: 460px
@@ -14,7 +21,7 @@
       line-height: 60px
       letter-spacing: -0.5px
       color: $color-header-text-day
-      padding: 0
+      padding: 0 0 0 0
       margin: 0
     &-items
       width: 100%
@@ -40,6 +47,9 @@
       opacity: 0.7
       padding: 0
       margin: 0
+      &:hover
+        opacity: 0.6
+        transition: opacity 0.3s linear
       &_selected
         font-style: normal
         font-weight: 600
@@ -50,22 +60,46 @@
   &__systems
     width: 100%
     list-style-type: none
-    margin: 0
-    padding: 0
     display: flex
-    justify-content: flex-start
-    align-items: center
+    justify-content: space-between
+    align-items: flex-start
+    padding: 0
+    margin: 0
   &__system
     padding: 0
-    margin: 0 30px 0 0
+    margin: 0
+    &-name
+      font-style: normal
+      font-weight: 600
+      font-size: 18px
+      line-height: 22px
+      color: $color-title-text-day
+      padding: 0
+      margin: 0
     &-foto
+      box-sizing: border-box
       display: block
-      width: 340px
-      height: 340px
-      padding: 20px
-      margin: 0 0 22px 0
+      width: 380px
+      height: 380px
       background-color: $color-background-day
       border-radius: 20px
-      object-fit: cover
+      object-fit: contain
       object-position: center
       filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06))
+      padding: 20px
+      margin: 0 0 22px 0
+      &:last-child
+        margin: 0
+  &-dot
+    display: none
+    width: 22px
+    padding: 0
+    margin: 0
+    &__item
+      width: 4px
+      height: 4px
+      border: none
+      border-radius: 50%
+      background: $color-dot-noactive-day
+      &_active
+        background: $color-dot-active-day

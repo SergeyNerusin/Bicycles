@@ -1,89 +1,35 @@
 .typestart
+  box-sizing: border-box
   width: 100%
-  height: 100%
-  min-height: 856px
   padding: 0
   margin: 0 auto
-  display: flex
-  justify-content: space-between
-  flex-wrap: wrap
-  align-items: flex-start
   position: relative
-  &-info
+  &__title
     width: 460px
-    display: flex
-    flex-direction: column
-    justify-content: flex-start
-    align-items: flex-start
+    font-style: normal
+    font-weight: 700
+    font-size: 55px
+    line-height: 60px
+    letter-spacing: -0.5px
+    color: $color-title-text-day
+    padding: 80px 0 0 120px
+    margin: 0 0 50px
+  &-container
+    width: 42.36%
+    position: absolute
+    right: 0
+    top: 20px
+    padding: 0
     margin: 0
-    padding: 80px 0 209px 120px
-    &__title
-      width: inherit
-      font-style: normal
-      font-weight: 700
-      font-size: 55px
-      line-height: 60px
-      letter-spacing: -0.5px
-      color: $color-title-text-day
-      padding: 0
-      margin: 0 0 50px 0
-    &__paragraph
-      width: inherit
-      font-style: normal
-      font-weight: 400
-      font-size: 18px
-      line-height: 28px
-      color: $color-pararaph-text-day
-      padding: 0
-      margin: 0 0 50px 0
-    &__link
-      width: 180px
-      height: 50px
-      background-color: $btn-circle
-      display: flex
-      justify-content: center
-      align-items: center
-      text-decoration: none
-      font-style: normal
-      font-weight: 600
-      font-size: 14px
-      line-height: 18px
-      letter-spacing: 1px
-      color: $btn-text-day
-      padding: 0
-      margin: 0 0 167px 0
-    &__system
-      width: inherit
-      display: flex
-      align-items: center
-      &-text
-        font-style: normal
-        font-weight: 400
-        font-size: 18px
-        line-height: 18px
-        color: $color-title-text-day
-        padding: 0
-        margin: 0 20px 0 0
-      &-hatch
-        width: 132px
-        height: 2px
-        border: 1px solid $color-background
-        background-color: $color-background
-        margin: 0
-        padding: 0
     &__foto-way
-      display: block
-      width: 610px
-      height: 836px
-      padding: 20px 0 0 0
+      width: 100%
+      height: auto
+      padding: 0
       margin: 0
       object-fit: cover
       object-position: center
-      position: absolute
-      right: 0
-      bottom: 0
     &__limiter
-      width: 810px
+      width: 132.46%
       height: 410px
       position: absolute
       bottom: 79px
@@ -103,3 +49,76 @@
       position: sticky
       top: 347px
       z-index: 1
+  &-info
+    width: 31.9%
+    display: block
+    margin: 0
+    padding: 0 0 209px 120px
+    &__paragraph
+      width: 100%
+      font-style: normal
+      font-weight: 400
+      font-size: 18px
+      line-height: 28px
+      opacity: 0.7
+      color: $color-pararaph-text-day
+      padding: 0
+      margin: 0 0 50px 0
+    &__link
+      display: block
+      width: 180px
+      height: 50px
+      text-decoration: none
+      font-style: normal
+      background-color: $btn-circle
+      border-radius: 4px
+      cursor: pointer
+      position: relative
+      color: $btn-text-day
+      padding: 0
+      margin: 0 0 167px 0
+      &-text
+        display: block
+        width: 160px
+        font-weight: 600
+        font-size: 14px
+        line-height: 18px
+        letter-spacing: 1px
+        text-align: center
+        position: relative
+        z-index: 1
+        padding: 16px 10px
+        margin: 0
+      &::before
+        transition-timing-function: linear
+        transition-duration: 0.3s
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 0
+        background-color: #319E75
+        border-radius: 4px
+      &:hover::before
+        width: 100%
+    &__system
+      width: inherit
+      display: flex
+      align-items: center
+      &-text
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 18px
+        color: $color-title-text-day
+        padding: 0
+        margin: 0 20px 0 0
+      &-hatch
+        width: 132px
+        height: 2px
+        outline: none
+        border: none
+        background-color: $color-background
+        margin: 0
+        padding: 0

@@ -1,14 +1,5 @@
 @charset "UTF-8";
 /* Здесь собираем стили */
-/* подключение переменных */
-/* цвет фона */
-/* цвет текста шапки */
-/* цвет текста заголовка */
-/* цвет текста параграфа */
-/* меню бургер */
-/* кнопка переключения фона */
-/* цвет ссылок  */
-/* цвет фона */
 /* подключение normalize */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -386,13 +377,25 @@ template {
   src: url("../fonts/Inter/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter/Inter-Bold.woff") format("woff");
 }
 
+/* подключение переменных */
+/* цвет фона */
+/* цвет текста шапки */
+/* цвет текста заголовка */
+/* цвет текста параграфа */
+/* меню бургер */
+/* кнопка переключения фона */
+/* цвет ссылок  */
+/* цвет фона */
+/* цвет фона точек */
+/* цвет декоративной линии*/
+/* подключение миксинов*/
 /* подключение настройки для всей страницы */
 .page {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: 'Inter', sans-serif;
   max-width: 1440px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   position: relative;
   padding: 0;
   margin: 0 auto;
@@ -401,12 +404,14 @@ template {
 /* подключение шапки сайта */
 .header {
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 28px 120px 28px 0px;
   margin: 0 auto;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,7 +509,7 @@ template {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   position: fixed;
   top: 0;
   left: 0;
@@ -624,7 +629,7 @@ template {
   content: "";
   width: 20px;
   height: 20px;
-  background: #24B47E;
+  background: #24b47e;
   border-radius: 17px;
   top: 2px;
   left: 2px;
@@ -655,89 +660,140 @@ template {
 
 /* секция Шоссе, ТТ и Грэвел */
 .typestart {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
-  height: 100%;
-  min-height: 856px;
   padding: 0;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   position: relative;
 }
 
-.typestart-info {
+.typestart__title {
   width: 460px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin: 0;
-  padding: 80px 0 209px 120px;
-}
-
-.typestart-info__title {
-  width: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 55px;
   line-height: 60px;
   letter-spacing: -0.5px;
   color: #151515;
+  padding: 80px 0 0 120px;
+  margin: 0 0 50px;
+}
+
+.typestart-container {
+  width: 42.36%;
+  position: absolute;
+  right: 0;
+  top: 20px;
   padding: 0;
-  margin: 0 0 50px 0;
+  margin: 0;
+}
+
+.typestart-container__foto-way {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.typestart-container__limiter {
+  width: 132.46%;
+  height: 410px;
+  position: absolute;
+  bottom: 79px;
+  right: 0;
+  z-index: 1;
+}
+
+.typestart-container__foto-bike {
+  display: block;
+  width: 340px;
+  height: 260px;
+  padding: 20px 50px;
+  margin: 0;
+  background-color: #f4f4f4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
+  border-radius: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 347px;
+  z-index: 1;
+}
+
+.typestart-info {
+  width: 31.9%;
+  display: block;
+  margin: 0;
+  padding: 0 0 209px 120px;
 }
 
 .typestart-info__paragraph {
-  width: inherit;
+  width: 100%;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
+  opacity: 0.7;
   color: #222222;
   padding: 0;
   margin: 0 0 50px 0;
 }
 
 .typestart-info__link {
+  display: block;
   width: 180px;
   height: 50px;
-  background-color: #24B47E;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-decoration: none;
   font-style: normal;
+  background-color: #24b47e;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  padding: 0;
+  margin: 0 0 167px 0;
+}
+
+.typestart-info__link-text {
+  display: block;
+  width: 160px;
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 1px;
-  color: #fff;
-  padding: 0;
-  margin: 0 0 167px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 16px 10px;
+  margin: 0;
+}
+
+.typestart-info__link::before {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #319E75;
+  border-radius: 4px;
+}
+
+.typestart-info__link:hover::before {
+  width: 100%;
 }
 
 .typestart-info__system {
@@ -763,54 +819,11 @@ template {
 .typestart-info__system-hatch {
   width: 132px;
   height: 2px;
-  border: 1px solid #D7D4D4;
-  background-color: #D7D4D4;
+  outline: none;
+  border: none;
+  background-color: #d7d4d4;
   margin: 0;
   padding: 0;
-}
-
-.typestart-info__foto-way {
-  display: block;
-  width: 610px;
-  height: 836px;
-  padding: 20px 0 0 0;
-  margin: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.typestart-info__limiter {
-  width: 810px;
-  height: 410px;
-  position: absolute;
-  bottom: 79px;
-  right: 0;
-  z-index: 1;
-}
-
-.typestart-info__foto-bike {
-  display: block;
-  width: 340px;
-  height: 260px;
-  padding: 20px 50px;
-  margin: 0;
-  background-color: #F4F4F4;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  -webkit-filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
-  border-radius: 20px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 347px;
-  z-index: 1;
 }
 
 /* секция цитата - катайся много или мало */
@@ -828,13 +841,21 @@ template {
           justify-content: space-between;
 }
 
+.quote__diagonal-line {
+  display: none;
+}
+
 .quote__foto {
-  width: 650px;
-  min-height: 460px;
+  width: 56%;
+  height: auto;
+  min-width: 284px;
+  min-height: 204px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 .quote__info {
@@ -851,7 +872,8 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 470px;
+  width: 40.48%;
+  min-width: 284px;
   padding: 0;
   margin: 0 0 0 80px;
 }
@@ -912,6 +934,25 @@ template {
   margin: 0 auto;
 }
 
+.road__diagonal-line {
+  display: none;
+}
+
+.road__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0 0 50px 0;
+}
+
 .road__title {
   width: 460px;
   font-style: normal;
@@ -922,7 +963,13 @@ template {
   color: #151515;
   text-align: left;
   padding: 0;
-  margin: 0 0 50px 0;
+  margin: 0;
+}
+
+.road__wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .road__paragraph {
@@ -934,6 +981,7 @@ template {
   color: #222222;
   text-align: left;
   opacity: 0.7;
+  padding: 0;
   margin: 0 0 80px 0;
 }
 
@@ -951,9 +999,12 @@ template {
 }
 
 .road__img {
-  display: block;
-  width: 650px;
-  height: 400px;
+  width: calc(50% - 10px);
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .road__sign {
@@ -967,16 +1018,22 @@ template {
 }
 
 .road__sign-svg {
-  margin: 0;
   padding: 12px 34px 12px 16px;
+  margin: 0;
 }
 
 .road__sign-svggrevel {
-  margin: 0;
   padding: 23px 34px 12px 16px;
+  margin: 0;
+}
+
+.road__sign-svgtt {
+  padding: 28px 34px 12px 16px;
+  margin: 0;
 }
 
 .road__buttons {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -985,17 +1042,26 @@ template {
           justify-content: flex-start;
 }
 
+.road__buttons-mob {
+  display: none;
+}
+
 .road__button {
   width: 50px;
   height: 50px;
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50px;
   cursor: pointer;
+}
+
+.road__button-mob {
+  width: 24px;
+  height: 24px;
 }
 
 .road__button-prev {
@@ -1003,14 +1069,34 @@ template {
   margin-right: 20px;
 }
 
+.road__button-prevmob {
+  background-image: url("../images/icons/arrow-prevmob.svg");
+  margin-right: 10px;
+}
+
 .road__button-next {
   background-image: url("../images/icons/arrow-next.svg");
 }
 
+.road__button-nextmob {
+  background-image: url("../images/icons/arrow-nextmob.svg");
+}
+
 /* секция Велосипеды */
 .bike {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
   margin: 0 auto;
   padding: 60px 120px;
+}
+
+.bike__diagonal-line {
+  display: none;
+}
+
+.bike-selected {
+  display: none;
 }
 
 .bike__name {
@@ -1021,6 +1107,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0;
   margin: 0 0 120px 0;
 }
 
@@ -1032,7 +1119,7 @@ template {
   line-height: 60px;
   letter-spacing: -0.5px;
   color: #151515;
-  padding: 0;
+  padding: 0 0 0 0;
   margin: 0;
 }
 
@@ -1074,6 +1161,12 @@ template {
   margin: 0;
 }
 
+.bike__name-link:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
 .bike__name-link_selected {
   font-style: normal;
   font-weight: 600;
@@ -1086,47 +1179,6 @@ template {
 .bike__systems {
   width: 100%;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bike__system {
-  padding: 0;
-  margin: 0 30px 0 0;
-}
-
-.bike__system-foto {
-  display: block;
-  width: 340px;
-  height: 340px;
-  padding: 20px;
-  margin: 0 0 22px 0;
-  background-color: #F4F4F4;
-  border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
-          filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
-}
-
-/* секция Тренировки */
-.training {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  padding: 150px 120px 120px 120px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1136,41 +1188,121 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-
-.training__info {
-  width: 460px;
-  min-height: 460px;
   padding: 0;
   margin: 0;
 }
 
-.training__info-title {
-  width: 100%;
+.bike__system {
   padding: 0;
-  margin: 0 0 50px 0;
+  margin: 0;
+}
+
+.bike__system-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #151515;
+  padding: 0;
+  margin: 0;
+}
+
+.bike__system-foto {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 380px;
+  height: 380px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+          filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+  padding: 20px;
+  margin: 0 0 22px 0;
+}
+
+.bike__system-foto:last-child {
+  margin: 0;
+}
+
+.bike-dot {
+  display: none;
+  width: 22px;
+  padding: 0;
+  margin: 0;
+}
+
+.bike-dot__item {
+  width: 4px;
+  height: 4px;
+  border: none;
+  border-radius: 50%;
+  background: #CACACA;
+}
+
+.bike-dot__item_active {
+  background: #151515;
+}
+
+/* секция Тренировки */
+.training {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 150px 120px 120px 120px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.training__diagonal-line {
+  display: none;
+}
+
+.training__title {
+  width: 38.34%;
   font-style: normal;
   font-weight: 700;
   font-size: 55px;
   line-height: 60px;
   letter-spacing: -0.5px;
   color: #151515;
+  padding: 0;
+  margin: 0 0 50px 0;
 }
 
-.training__info-paragraph {
-  width: 100%;
+.training__foto {
+  display: block;
+  width: 40.28%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: 150px;
+  right: 120px;
+  margin: 0;
   padding: 0;
-  margin: 0 0 182px 0;
+}
+
+.training__paragraph {
+  width: 38.34%;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   color: #222222;
   opacity: 0.7;
+  padding: 0;
+  margin: 0 0 182px 0;
 }
 
 .training__programs {
-  width: 100%;
+  width: 38.34%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1210,23 +1342,15 @@ template {
   margin: 0;
 }
 
-.training__foto {
-  display: block;
-  width: 580px;
-  height: 460px;
-  margin: 0;
-  padding: 0;
-}
-
 /* подключение футера */
 .footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  min-height: 424px;
+  background-color: #efefef;
   margin: 0;
   padding: 80px 120px 60px;
-  min-height: 424px;
-  background-color: #EFEFEF;
 }
 
 .footer__title {
@@ -1240,93 +1364,137 @@ template {
   color: #151515;
 }
 
-.footer__container-input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.footer-form {
   width: 360px;
   height: 50px;
-  border: 1px solid rgba(199, 199, 199, 0.5);
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #EFEFEF;
-  padding: 11px 22px 11px 20px;
+  position: relative;
+  padding: 0;
   margin: 0 0 100px 0;
 }
 
-.footer__input {
+.footer-form__input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: calc(100% - 16px);
+  width: 100%;
   height: 100%;
-  padding: 0 10px 0 0;
-  margin: 0;
-  border: none;
-  background-color: inherit;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  border-radius: 4px;
   cursor: pointer;
+  background-color: #efefef;
+  padding: 11px 22px 11px 20px;
+  margin: 0;
 }
 
-.footer__input:focus {
+.footer-form__input-night::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.footer-form__input-night:-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer-form__input-night::-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer-form__input-night::placeholder {
+  color: #fff;
+}
+
+.footer-form__input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #151515;
+  opacity: 0.7;
+}
+
+.footer-form__input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #151515;
+  opacity: 0.7;
+}
+
+.footer-form__input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #151515;
+  opacity: 0.7;
+}
+
+.footer-form__input::placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  color: #151515;
+  opacity: 0.7;
+}
+
+.footer-form__input:focus {
   outline: none;
 }
 
-.footer__input::-webkit-input-placeholder {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 28px;
-  color: inherit;
+.footer-form__input:focus::-webkit-input-placeholder {
+  opacity: 1;
 }
 
-.footer__input:-ms-input-placeholder {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 28px;
-  color: inherit;
+.footer-form__input:focus:-ms-input-placeholder {
+  opacity: 1;
 }
 
-.footer__input::-ms-input-placeholder {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 28px;
-  color: inherit;
+.footer-form__input:focus::-ms-input-placeholder {
+  opacity: 1;
 }
 
-.footer__input::placeholder {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 28px;
-  color: inherit;
+.footer-form__input:focus::placeholder {
+  opacity: 1;
 }
 
-.footer__button-submit {
+.footer-form__input:hover::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.footer-form__input:hover:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.footer-form__input:hover::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.footer-form__input:hover::placeholder {
+  opacity: 1;
+}
+
+.footer-form__btn-submit {
   display: none;
   width: 16px;
   height: 28px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-}
-
-.footer__button-text {
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 28px;
-  text-align: right;
   color: #151515;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 22px;
+  padding: 0;
+  margin: 0;
 }
 
 .footer__wrapper {
-  padding: 0;
-  margin: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1337,6 +1505,8 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .footer__copyright {
@@ -1344,7 +1514,7 @@ template {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #CFCFCF;
+  color: #cfcfcf;
   margin: 0;
   padding: 0;
 }
@@ -1356,6 +1526,8 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__container-sun {
@@ -1369,8 +1541,6 @@ template {
   display: inline-block;
   width: 44px;
   height: 24px;
-  padding: 0;
-  margin: 0 22px 0 0;
   background-color: #fff;
   border-radius: 17px;
   border: none;
@@ -1379,13 +1549,15 @@ template {
   z-index: 0;
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
+  padding: 0;
+  margin: 0 22px 0 0;
 }
 
 .footer__container-btn::after {
   content: "";
   width: 20px;
   height: 20px;
-  background: #24B47E;
+  background: #24b47e;
   border-radius: 17px;
   top: 2px;
   left: 2px;
@@ -1414,8 +1586,145 @@ template {
   margin: 0;
 }
 
+.footer__logo {
+  display: none;
+  width: 38px;
+  height: 38px;
+}
+
 /* Медиазапросы */
-@media (max-width: 530px) {
+@media (max-width: 1400px) {
+  .typestart__title {
+    width: 380px;
+    padding: 40px 0 0 120px;
+  }
+  .typestart-container__foto-bike {
+    width: 320px;
+    height: 240px;
+  }
+  .bike__system-foto {
+    width: 95%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .typestart-container__title {
+    width: 100%;
+    font-size: 50px;
+    line-height: 55px;
+  }
+  .typestart-container__limiter {
+    height: 380px;
+  }
+  .typestart-container__foto-bike {
+    width: 300px;
+    height: 220px;
+  }
+  .typestart-info {
+    width: 30%;
+    padding: 0 0 100px 120px;
+  }
+  .typestart-info__link {
+    margin: 0 0 120px 0;
+  }
+  .quote__info-text {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .road__paragraph {
+    width: 48.5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .typestart__title {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  .typestart-container__limiter {
+    width: 128%;
+    height: 240px;
+  }
+  .typestart-container__foto-bike {
+    width: 280px;
+    height: 200px;
+  }
+  .typestart-info__paragraph {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .quote__info-text {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .bike__name-title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .bike__system-foto {
+    margin: 0 15px 22px 0;
+  }
+  .training {
+    padding: 100px 120px 60px;
+  }
+  .training__title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .training__paragraph {
+    margin: 0 0 92px;
+  }
+  .training__foto {
+    width: 40%;
+    top: 100px;
+  }
+}
+
+@media (max-width: 880px) {
+  .typestart__title {
+    padding: 80px 0 0 80px;
+  }
+  .typestart-container__foto-way {
+    position: relative;
+  }
+  .typestart-container__limiter {
+    width: 124%;
+    height: 200px;
+  }
+  .typestart-container__foto-bike {
+    width: 220px;
+    height: 160px;
+  }
+  .quote {
+    padding: 80px 120px 60px 80px;
+  }
+  .quote__info {
+    margin-left: 50px;
+  }
+  .quote__info-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .road {
+    padding: 60px 0 60px 80px;
+  }
+  .bike {
+    padding: 60px 80px;
+  }
+  .training {
+    padding: 98px 80px 60px 80px;
+  }
+  .training__foto {
+    width: 42%;
+    right: 80px;
+  }
+  .footer {
+    padding: 80px 80px 60px;
+  }
+}
+
+@media (max-width: 768px) {
   .header {
     padding: 28px 18px 30px 0;
   }
@@ -1426,6 +1735,414 @@ template {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .typestart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: static;
+  }
+  .typestart-container {
+    width: 254px;
+    height: 348px;
+    position: relative;
+    left: 0;
+    margin-bottom: 77px;
+  }
+  .typestart-container__limiter {
+    width: 284px;
+    height: 200px;
+  }
+  .typestart-container__foto-way {
+    position: relative;
+  }
+  .typestart-container__foto-bike {
+    width: 180px;
+    height: 138px;
+    padding: 10px 26px;
+    margin: 0;
+  }
+  .typestart-info {
+    width: 284px;
+    padding: 0;
+    margin: 0;
+  }
+  .typestart-info__link {
+    width: 100%;
+    height: 46px;
+    padding: 0;
+    margin: 0;
+  }
+  .typestart-info__link-text {
+    padding: 14px 62px 13px;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+  }
+  .typestart-info__system {
+    display: none;
+  }
+  .quote {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 513px;
+    margin: 0;
+    padding: 40px 18px;
+  }
+  .quote__foto {
+    width: 284px;
+    height: 204px;
+    margin-bottom: 40px;
+  }
+  .quote__info {
+    width: 284px;
+    margin-left: 0;
+  }
+  .quote__info-text {
+    margin-bottom: 40px;
+  }
+  .road {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 40px 18px;
+  }
+  .road__container {
+    width: 284px;
+  }
+  .road__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .road__paragraph {
+    width: 284px;
+    margin: 0 0 40px 0;
+  }
+  .road__foto {
+    width: 284px;
+    height: 204px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .road__img:first-of-type {
+    width: 100%;
+  }
+  .road__img:last-of-type {
+    width: 0;
+    display: none;
+  }
+  .road__buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .bike__name {
+    width: 284px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 auto 40px;
+  }
+  .bike__name-title {
+    margin: 0 0 40px 0;
+  }
+  .bike__name-items {
+    display: none;
+  }
+  .bike-selected {
+    display: block;
+    width: 114px;
+    height: 30px;
+    background-color: #F4F4F4;
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 14px;
+    color: #151515;
+    padding: 0;
+    margin: 0;
+  }
+  .bike-selected:focus {
+    outline: none;
+  }
+  .bike__systems {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+  }
+  .bike__system {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 284px;
+    height: 306px;
+    padding: 15px 15px 37px;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+            filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+  }
+  .bike__system-name {
+    display: block;
+    width: 254px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+  .bike__system-foto {
+    width: 254px;
+    height: 254px;
+    padding: 0;
+    margin: 0 0 3px 0;
+  }
+  .bike__system:nth-child(2n + 1) {
+    width: 0;
+    display: none;
+  }
+  .bike-dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+  }
+  .training {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .training__title {
+    width: 284px;
+    margin: 0 0 40px 0;
+  }
+  .training__foto {
+    width: 284px;
+    height: 225px;
+    position: static;
+    margin: 0 0 40px 0;
+  }
+  .training__paragraph {
+    width: 284px;
+  }
+  .training__programs {
+    width: 284px;
+  }
+  .footer__title {
+    width: 284px;
+  }
+  .footer-form {
+    width: 284px;
+    margin: 0 0 99px 0;
+  }
+  .footer__container-sun {
+    margin: 0 10px 0 0;
+  }
+  .footer__container-btn {
+    margin: 0 10px 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 28px 18px 30px 0;
+  }
+  .menu__items_visible {
+    display: none;
+  }
+  .menu-button_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .typestart {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 40px 18px;
+  }
+  .typestart__title {
+    width: 284px;
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0;
+  }
+  .typestart-container {
+    position: relative;
+    left: 18px;
+    margin-bottom: 77px;
+  }
+  .typestart-container__limiter {
+    height: 159px;
+    bottom: 37px;
+  }
+  .typestart-container__foto-bike {
+    width: 180px;
+    height: 138px;
+    padding: 10px 26px;
+    margin: 0;
+  }
+  .typestart-info {
+    padding: 0;
+    margin: 0;
+  }
+  .typestart-info__link {
+    padding: 0;
+    margin: 0;
+  }
+  .quote {
+    padding: 40px 18px;
+  }
+  .quote__diagonal-line {
+    display: block;
+    height: 0;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  .road {
+    padding: 40px 18px;
+  }
+  .road__diagonal-line {
+    display: block;
+    height: 0;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  .road__title {
+    width: 108px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .road__paragraph {
+    margin: 0;
+  }
+  .road__buttons-mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .road__buttons {
+    display: none;
+  }
+  .bike {
+    padding: 40px 18px;
+  }
+  .bike__diagonal-line {
+    display: block;
+    height: 0;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  .bike__name {
+    margin: 0 auto 20px auto;
+  }
+  .bike__name-title {
+    width: 284px;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 20px 0;
+  }
+  .bike__systems {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .training {
+    padding: 40px 18px;
+  }
+  .training__diagonal-line {
+    display: block;
+    height: 0;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  .training__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 40px 0;
+  }
+  .training__paragraph {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 40px 0;
+  }
+  .footer {
+    min-height: 358px;
+    padding: 40px 18px 25px 18px;
+  }
+  .footer__container {
+    display: none;
+  }
+  .footer__logo {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
