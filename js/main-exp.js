@@ -1,5 +1,35 @@
 /* jshint esversion:6 */
 
+const dataBike = {
+  road:{ 
+    title: "Шоссе", 
+    paragrahp:"На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.", 
+    name:["Cervelo Caledonia-5","Cannondale Systemsix Himod","Trek Domane SL-7"],
+    link:[ "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN", "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J", "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"], 
+    srcImg:["./images/sys-cerveloCaledon.png", "./images/sys-cannondaleSystemsix.png", "./images/sys-trekDomane.png"], 
+    sign:"./images/icons/line-curve.svg"},
+ 
+  grevel:{
+    title: "Гревел",
+    paragrahp:"Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.",
+    name:["Cervelo Aspero GRX 810", "Specialized S-Works Diverge", "Cannondale Topstone Lefty 3"],
+    link:["https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE", "https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9", "https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"],
+    srcImg:["./images/sys-cerveloAspero.png","./images/sys-S-WorksDiverge.png","./images/sys-cannondaleTopstone.png"],
+    sing:"./images/icons/line-wavy.svg"
+  },
+
+  tt:{
+    title: "TT",
+    paragrahp:"ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.",
+    name:["Specialized S-Works Shiv","BMC Timemachine 01 ONE","Cervelo P-Series"],
+    link:["https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9","https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835","https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"],
+    images:["./image/sys-S-WorksShiv.png", "./image/sys-BMC-Timemachine.png","./image/sys-cerveloP-Series.png"],
+    sing:"./image/icons/line-flat.svg"
+  }
+};
+
+console.log(dataBike.road.title);
+
 /* Для стационарной версии */ 
 /* Находим селектор страницы с общими настройками css. */
 const pageColorbgc = document.querySelector('.page_color-bgc');
@@ -49,6 +79,7 @@ const btnSwitchfooter = footerColorbgc.querySelector('.footer__container-btn');
 /* Для мобильной версии */ 
 /* Находим селектор кнопки меню "бургер". */
 const burgerBtn = document.querySelector('.menu-button');
+const burgerBtnColor = document.querySelectorAll('.button_color-bgc');
 
 /* Находим селектор для открытия меню при нажатии на кнопку "бургер" - для моб. устройств. */ 
 const containerColorbgc = document.querySelector('.container_color-bgc'); 
@@ -94,11 +125,13 @@ function toggleIcons(selectSun, selectMoon){
 function getWhiteTheme(){
   textColor.forEach(el => el.style.color = "");
   textColorl.forEach(el => el.style.color = "");
-  inputColorbgc.forEach(el =>el.style.backgroundColor = "");
-  inputColorbgc.forEach(el =>el.style.color = "");
+  inputColorbgc.forEach(el => el.style.backgroundColor = "");
+  inputColorbgc.forEach(el => el.style.color = "");
+  burgerBtnColor.forEach(el => el.style.backgroundColor = "");
+  burgerBtnColor.forEach(el => el.style.border = "");
   pageColorbgc.style.backgroundColor = "";
   headerColorbgc.style.backgroundColor = "";
-  hatchColorbgc.style.backgroundColor ="";
+  hatchColorbgc.style.backgroundColor = "";
   btnPrev.style.backgroundColor = "";
   btnNext.style.backgroundColor = "";
   footerColorbgc.style.backgroundColor = "";
@@ -113,6 +146,8 @@ function getDarkTheme(){
   textColorl.forEach(el => el.style.color = "#e5e5e5");
   inputColorbgc.forEach(el => el.style.backgroundColor = "#2f2f2f");
   inputColorbgc.forEach(el => el.style.color = "#fff");
+  burgerBtnColor.forEach(el => el.style.backgroundColor = "#fff");
+  burgerBtnColor.forEach(el => el.style.border = "1px solid #fff");
   pageColorbgc.style.backgroundColor = "#2f2f2f";
   headerColorbgc.style.backgroundColor = "#333333";
   hatchColorbgc.style.backgroundColor ="#707070";
@@ -149,7 +184,7 @@ function getNotification(){
 function submitEmail(evt) {
   evt.preventDefault();
   getNotification();
-  btnSubmit.style.display="none";
+  btnSubmit.style.display = "none";
    
 }
 

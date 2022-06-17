@@ -388,6 +388,7 @@ template {
 /* цвет фона */
 /* цвет фона точек */
 /* цвет декоративной линии*/
+/* бордер элемента select */
 /* подключение миксинов*/
 /* подключение настройки для всей страницы */
 .page {
@@ -486,8 +487,10 @@ template {
 .menu-button__line {
   width: 100%;
   height: 2px;
-  border: 1px solid #151515;
-  background-color: #151515;
+  background-color: #e3e3e3;
+  border: 1px solid #e3e3e3;
+  padding: 0;
+  margin: 0;
 }
 
 /* подключение контейнера для меню на моб. устройствах */
@@ -531,8 +534,8 @@ template {
   width: 22px;
   height: 22px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 28px;
+  right: 16px;
   z-index: 102;
   background-image: url("../images/icons/close.svg");
   border: 0;
@@ -978,9 +981,9 @@ template {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
+  opacity: 0.7;
   color: #222222;
   text-align: left;
-  opacity: 0.7;
   padding: 0;
   margin: 0 0 80px 0;
 }
@@ -1154,9 +1157,9 @@ template {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  cursor: pointer;
   color: #222222;
   opacity: 0.7;
+  cursor: pointer;
   padding: 0;
   margin: 0;
 }
@@ -1241,7 +1244,7 @@ template {
   height: 4px;
   border: none;
   border-radius: 50%;
-  background: #CACACA;
+  background: #cacaca;
 }
 
 .bike-dot__item_active {
@@ -1295,8 +1298,8 @@ template {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #222222;
   opacity: 0.7;
+  color: #222222;
   padding: 0;
   margin: 0 0 182px 0;
 }
@@ -1609,8 +1612,7 @@ template {
 }
 
 @media (max-width: 1200px) {
-  .typestart-container__title {
-    width: 100%;
+  .typestart__title {
     font-size: 50px;
     line-height: 55px;
   }
@@ -1638,10 +1640,6 @@ template {
 }
 
 @media (max-width: 1024px) {
-  .typestart__title {
-    font-size: 50px;
-    line-height: 55px;
-  }
   .typestart-container__limiter {
     width: 128%;
     height: 240px;
@@ -1682,9 +1680,6 @@ template {
 }
 
 @media (max-width: 880px) {
-  .typestart__title {
-    padding: 80px 0 0 80px;
-  }
   .typestart-container__foto-way {
     position: relative;
   }
@@ -1726,15 +1721,7 @@ template {
 
 @media (max-width: 768px) {
   .header {
-    padding: 28px 18px 30px 0;
-  }
-  .menu__items_visible {
-    display: none;
-  }
-  .menu-button_visible {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    padding: 28px 18px 30px;
   }
   .typestart {
     display: -webkit-box;
@@ -1894,6 +1881,7 @@ template {
     margin: 0 auto 40px;
   }
   .bike__name-title {
+    width: 284px;
     margin: 0 0 40px 0;
   }
   .bike__name-items {
@@ -1903,19 +1891,28 @@ template {
     display: block;
     width: 114px;
     height: 30px;
-    background-color: #F4F4F4;
-    border: 1px solid #E3E3E3;
+    background-color: #f4f4f4;
+    border: 1px solid #e3e3e3;
     border-radius: 2px;
+    padding: 0;
+    margin: 0;
+  }
+  .bike-selected select {
+    width: 100%;
+    height: 100%;
     font-style: normal;
     font-weight: 600;
     font-size: 11px;
     line-height: 14px;
     color: #151515;
-    padding: 0;
-    margin: 0;
+    border-radius: inherit;
+    background-color: inherit;
   }
-  .bike-selected:focus {
+  .bike-selected select:focus {
     outline: none;
+  }
+  .bike-selected select option {
+    background-color: #f4f4f4;
   }
   .bike__systems {
     -webkit-box-pack: center;
@@ -2004,9 +2001,6 @@ template {
 }
 
 @media (max-width: 500px) {
-  .header {
-    padding: 28px 18px 30px 0;
-  }
   .menu__items_visible {
     display: none;
   }
@@ -2046,6 +2040,10 @@ template {
     padding: 0;
     margin: 0;
   }
+  .typestart-info__paragraph {
+    font-size: 12px;
+    line-height: 18px;
+  }
   .typestart-info__link {
     padding: 0;
     margin: 0;
@@ -2078,6 +2076,8 @@ template {
     line-height: 40px;
   }
   .road__paragraph {
+    font-size: 12px;
+    line-height: 18px;
     margin: 0;
   }
   .road__buttons-mob {

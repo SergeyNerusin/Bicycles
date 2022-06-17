@@ -26,9 +26,9 @@
           </li>
         </ul>
         <button type="button" class="menu-button menu-button_visible">
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
+          <span class="menu-button__line button_color-bgc"></span>
+          <span class="menu-button__line button_color-bgc"></span>
+          <span class="menu-button__line button_color-bgc"></span>
         </button>
       </nav>
     </header>
@@ -39,17 +39,26 @@
         <div class="container-menu">
           <ul class="container-menu__items">
             <li class="container-menu__item">
-              <a href="#roads" class="container-menu__link text_color"
+              <a
+                href="#roads"
+                class="container-menu__link text_color"
+                onclick="toggleSelector(containerColorbgc,'container_opened')"
                 >Покрытия и градиенты</a
               >
             </li>
             <li class="container-menu__item">
-              <a href="#bicycles" class="container-menu__link text_color"
+              <a
+                href="#bicycles"
+                class="container-menu__link text_color"
+                onclick="toggleSelector(containerColorbgc,'container_opened')"
                 >Велосипеды</a
               >
             </li>
             <li class="container-menu__item">
-              <a href="#velo-training" class="container-menu__link text_color"
+              <a
+                href="#velo-training"
+                class="container-menu__link text_color"
+                onclick="toggleSelector(containerColorbgc,'container_opened')"
                 >Тренировки</a
               >
             </li>
@@ -158,7 +167,7 @@
               <img
                 class="road__sign-svg"
                 src="./images/icons/line-curve.svg"
-                alt="Линия"
+                alt="Линия - индикатор"
               />
             </div>
           </div>
@@ -174,11 +183,13 @@
         <hr class="bike__diagonal-line" />
         <div class="bike__name">
           <h2 class="bike__name-title text_color">Велосипеды</h2>
-          <select class="bike-selected" name="bike-option" id="bike-option">
-            <option value="highway">Шоссе</option>
-            <option value="grevel">Гревел</option>
-            <option value="tt">TT</option>
-          </select>
+          <form class="bike-selected" name="bike-select" id="bike-select">
+            <select>
+              <option value="highway">Шоссе</option>
+              <option value="grevel">Гревел</option>
+              <option value="tt">TT</option>
+            </select>
+          </form>
           <ul class="bike__name-items">
             <li class="bike__name-item">
               <a

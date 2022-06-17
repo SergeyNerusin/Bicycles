@@ -15,12 +15,7 @@
     margin: 0 0 120px 0
     &-title
       width: 460px
-      font-style: normal
-      font-weight: 700
-      font-size: 55px
-      line-height: 60px
-      letter-spacing: -0.5px
-      color: $color-header-text-day
+      @include textTitle()
       padding: 0 0 0 0
       margin: 0
     &-items
@@ -42,9 +37,9 @@
       font-weight: 400
       font-size: 18px
       line-height: 28px
-      cursor: pointer
       color: $color-link-day
       opacity: 0.7
+      cursor: pointer
       padding: 0
       margin: 0
       &:hover

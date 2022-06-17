@@ -8,12 +8,7 @@
     display: none
   &__title
     width: 38.34%
-    font-style: normal
-    font-weight: 700
-    font-size: 55px
-    line-height: 60px
-    letter-spacing: -0.5px
-    color: $color-title-text-day
+    @include textTitle()
     padding: 0
     margin: 0 0 50px 0
   &__foto
@@ -29,12 +24,7 @@
     padding: 0
   &__paragraph
     width: 38.34%
-    font-style: normal
-    font-weight: 400
-    font-size: 18px
-    line-height: 28px
-    color: $color-pararaph-text-day
-    opacity: 0.7
+    @include textParagraph()
     padding: 0
     margin: 0 0 182px 0
   &__programs
