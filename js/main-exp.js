@@ -28,8 +28,6 @@ const dataBike = {
   }
 };
 
-console.log(dataBike.road.title);
-
 /* Для стационарной версии */ 
 /* Находим селектор страницы с общими настройками css. */
 const pageColorbgc = document.querySelector('.page_color-bgc');
