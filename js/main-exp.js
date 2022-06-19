@@ -4,27 +4,31 @@ const dataBike = {
   road:{ 
     title: "Шоссе", 
     paragrahp:"На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.", 
-    name:["Cervelo Caledonia-5","Cannondale Systemsix Himod","Trek Domane SL-7"],
+    srcImgRoad:["./images/road-mountain.png", "./images/road-country.png"], 
+    sing:"./images/icons/line-curve.svg",
+    name:["Cervelo Caledonia-5", "Cannondale Systemsix Himod","Trek Domane SL-7"],
     link:[ "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN", "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J", "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"], 
-    srcImg:["./images/sys-cerveloCaledon.png", "./images/sys-cannondaleSystemsix.png", "./images/sys-trekDomane.png"], 
-    sign:"./images/icons/line-curve.svg"},
- 
+    bicyclesImg:["./images/sys-cerveloCaledon.png", "./images/sys-cannondaleSystemsix.png", "./images/sys-trekDomane.png"],
+  }, 
+   
   grevel:{
     title: "Гревел",
     paragrahp:"Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.",
+    srcImgRoad :["./images/road-country.png", "./images/road-highway.png"], 
+    sing: "./images/icons/line-wavy.svg",
     name:["Cervelo Aspero GRX 810", "Specialized S-Works Diverge", "Cannondale Topstone Lefty 3"],
     link:["https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE", "https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9", "https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"],
-    srcImg:["./images/sys-cerveloAspero.png","./images/sys-S-WorksDiverge.png","./images/sys-cannondaleTopstone.png"],
-    sing:"./images/icons/line-wavy.svg"
+    bicyclesImg:["./images/sys-cerveloAspero.png", "./images/sys-S-WorksDiverge.png", "./images/sys-cannondaleTopstone.png"],
   },
 
   tt:{
     title: "TT",
     paragrahp:"ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.",
+    srcImgRoad:["./images/road-highway.png ", "./images/road-mountain.png"], 
+    sing:"./images/icons/line-flat.svg",
     name:["Specialized S-Works Shiv","BMC Timemachine 01 ONE","Cervelo P-Series"],
     link:["https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9","https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835","https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"],
-    images:["./image/sys-S-WorksShiv.png", "./image/sys-BMC-Timemachine.png","./image/sys-cerveloP-Series.png"],
-    sing:"./image/icons/line-flat.svg"
+    bicyclesImg:["./images/sys-S-WorksShiv.png", "./images/sys-BMC-Timemachine.png","./images/sys-cerveloP-Series.png"],
   }
 };
 
@@ -202,12 +206,7 @@ btnSubmit.addEventListener('mousedown', (evt) => {
   }
 });
 
-
-
 formInputEmail.addEventListener('submit', submitEmail);    
-
-
-
 
 /* Устанавливаем прослушиватель на кнопку меню "бургер" 
 при нажатии навешиваем класс container_opened - делааем меню видимым. */ 
@@ -223,19 +222,15 @@ btnMenuClose.addEventListener('click', () => {
   toggleSelector(containerColorbgc,'container_opened');
 });
 
-
 /*  Устанавливаем прослушиватель на кнопку переключения фона стационарной версии,
     и при смене положения переключателя меняем фон, и цвет текста,
     ссылок. */ 
 btnSwitchfooter.addEventListener('click', () => {
- 
   toggleSelector(btnSwitchfooter,'footer__container-btn_on');
   toggleSelector(btnSwitchCont,'container-footer__btn_on');
   toggleIcons(SunImgpage, MoonImgpage);
   toggleThemeColor();
 });
-
-
 
 /*  В моб. меню устанавливаем прослушиватель на кнопку переключения фона страницы,
     и при смене положения переключателя меняем фон, и цвет текста,
@@ -247,7 +242,122 @@ btnSwitchCont.addEventListener('click', () => {
   toggleThemeColor();
 });
 
+/* Определяем селекторы кнопок блока road */ 
+const road = document.querySelector('.road');
+const roadTitle = road.querySelector('.road__title');
+const roadParagraph = road.querySelector('.road__paragraph');
+const roadImg = road.querySelectorAll('.road__img');
+const roadBtnNext = road.querySelector('.road__button-next');
+const roadBtnNextmob = road.querySelector('.road__button-nextmob');
+const roadBtnPrev = road.querySelector('.road__button-prev');
+const roadBtnPrevmob = road.querySelector('.road__button-prevmob');
+const roadSign = road.querySelector('.road__sign-svg');
+/* Определяем селекторы кнопок блока bike */ 
+const bike = document.querySelector('.bike');
+const btnBlock = bike.querySelector('.bike__name-items');
+const btnBike = btnBlock.querySelectorAll('.bike__name-link');
+const bikeSystemFoto = bike.querySelectorAll('.bike__system-foto');
+const bikeSystemName = bike.querySelectorAll('.bike__system-name');  
 
 
+const dataKey = Object.keys(dataBike);
+const long = Object.keys(dataBike).length - 1;
+/* Счетчик переключений */ 
+let count = 1;
 
+/* Кнопки в блоке Велосипеды - запоминаем индекс кнопки на которой
+   было произведено нажатие */ 
+let btnCount = 0;
+
+/* Для отрисовки текта, фото и индикатора дороги  в секции Дорога */ 
+function switchDate(objectName) {
+  roadTitle.textContent = objectName.title;
+  roadParagraph.textContent = objectName.paragrahp;
+  roadImg[0].src = objectName.srcImgRoad[0];
+  roadImg[1].src = objectName.srcImgRoad[1];
+  roadSign.src = objectName.sing;
+}
+
+/* Для отрисовки картинок в секции Велосипеды */ 
+function switchImgBike(objectName) {
+  for(i=0; i < btnBike.length; i++){
+    bikeSystemFoto[i].src = objectName.bicyclesImg[i];
+    bikeSystemName[i].href = objectName.link[i];
+    bikeSystemName[i].textContent = objectName.name[i];
+  }
+}
+
+/* Для перебора фото в секции Велосипеды моб. версии */
+function switchImgmob(objectName, count) {
+  bikeSystemFoto[0].src = objectName.bicyclesImg[count];
+  bikeSystemName[0].textContent = objectName.name[count];
+} 
+
+road.addEventListener('click', (event) => {
+  if(event.target === roadBtnNext || event.target === roadBtnNextmob){
+      count++;
+        if(count > long){
+          count = 0; 
+        } 
+    }
+
+  if(event.target === roadBtnPrev || event.target === roadBtnPrevmob){
+      count--;
+        if(count < 0){
+          count = long; 
+        } 
+  }
+  switchDate(dataBike[dataKey[count]]);
+});
+
+/* Определяем по какой кнопке кликнули и предаем ссылку объкта для отрисовки данных 
+в блоке Велосипеды */ 
+btnBlock.addEventListener('click', (event) => {
+  btnBike[btnCount].classList.remove('bike__name-link_selected');
+    for(i=0; i < btnBike.length; i++){
+      if(event.target === btnBike[i]){
+        event.target.classList.add('bike__name-link_selected');
+        console.log(dataBike[dataKey[i]]);
+        btnCount = i;
+        switchImgBike(dataBike[dataKey[i]]);
+      }
+    }
+});
+
+/* Форма select - option на мобильном */
+const selectForm = bike.querySelector('.bike-selected');
+let index = selectForm.selectedIndex;
+selectForm.addEventListener('click', (event) => {
+  if(selectForm.selectedIndex !== index){
+      switchImgBike(dataBike[dataKey[selectForm.selectedIndex]]);
+      index = selectForm.selectedIndex;
+    }
+}); 
+
+let countmob = 1;
+let longmob = dataBike[dataKey[index]].bicyclesImg.length - 1;
+
+bikeSystemFoto[0].addEventListener('click', function(event){
+  if (document.documentElement.clientWidth <= 320){
+    let coordX = event.clientX;
+    console.log('click');
+      if( 37 <= coordX && coordX <= 142 ){ 
+        console.log('Prev', event.clientX);
+        countmob--;
+        if(countmob < 0) {
+          countmob = longmob;
+        }
+      }
+
+      if( 143 <= coordX && coordX <= 284 ){ 
+        console.log('Next', event.clientX);
+        countmob++;
+        if(countmob > longmob){
+          countmob = 0;
+        }
+      }
+      
+      switchImgmob(dataBike[dataKey[index]], countmob);
+} 
+}); 
 

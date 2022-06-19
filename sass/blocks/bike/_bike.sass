@@ -7,6 +7,22 @@
     display: none
   &-selected
     display: none
+    width: 114px
+    height: 30px
+    background-color: $color-background-day
+    border: 1px solid $color-border-day
+    border-radius: 2px
+    font-style: normal
+    font-weight: 600
+    font-size: 11px
+    line-height: 14px
+    color: #151515
+    padding: 0
+    margin: 0
+    &:focus
+      outline: none
+    & option
+      background-color: $color-background-day
   &__name
     width: 100%
     display: flex
@@ -32,7 +48,8 @@
     &-item:last-child
       margin: 0
     &-link
-      text-decoration: none
+      border: none
+      background-color: transparent
       font-style: normal
       font-weight: 400
       font-size: 18px
@@ -64,6 +81,7 @@
     padding: 0
     margin: 0
     &-name
+      text-decoration: none
       font-style: normal
       font-weight: 600
       font-size: 18px
@@ -71,6 +89,9 @@
       color: $color-title-text-day
       padding: 0
       margin: 0
+    &-name:hover
+      opacity: 0.6
+      transition: opacity 0.3s linear
     &-foto
       box-sizing: border-box
       display: block

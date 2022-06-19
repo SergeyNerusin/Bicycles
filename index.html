@@ -137,11 +137,11 @@
           <div class="road__buttons-mob">
             <button
               type="button"
-              class="road__button road__button-mob road__button-mob road__button-prevmob"
+              class="road__button road__button-mob road__button-prevmob"
             ></button>
             <button
               type="button"
-              class="road__button road__button-widht road__button-mob road__button-nextmob"
+              class="road__button road__button-mob road__button-nextmob"
             ></button>
           </div>
         </div>
@@ -183,30 +183,31 @@
         <hr class="bike__diagonal-line" />
         <div class="bike__name">
           <h2 class="bike__name-title text_color">Велосипеды</h2>
-          <form class="bike-selected" name="bike-select" id="bike-select">
-            <select>
-              <option value="highway">Шоссе</option>
-              <option value="grevel">Гревел</option>
-              <option value="tt">TT</option>
+          <form>
+            <select class="bike-selected">
+              <option value="0">Шоссе</option>
+              <option value="1">Гревел</option>
+              <option value="2">TT</option>
             </select>
           </form>
           <ul class="bike__name-items">
             <li class="bike__name-item">
-              <a
-                href="#"
-                class="bike__name-link bike__name-link_selected text_color"
-                >Шоссе</a
+              <button
+                type="button"
+                class="bike__name-link text_color bike__name-link_selected"
               >
+                Шоссе
+              </button>
             </li>
             <li class="bike__name-item">
-              <a
-                href="http://127.0.0.1:5501/grevel.html?#bicycles"
-                class="bike__name-link text_color-l"
-                >Грэвел</a
-              >
+              <button type="button" class="bike__name-link text_color-l">
+                Грэвел
+              </button>
             </li>
             <li class="bike__name-item">
-              <a href="#" class="bike__name-link text_color-l">ТТ</a>
+              <button type="button" class="bike__name-link text_color-l">
+                ТТ
+              </button>
             </li>
           </ul>
         </div>
@@ -217,8 +218,11 @@
               alt="Фото: велосипед"
               class="bike__system-foto"
             />
-            <span class="bike__system-name text_color"
-              >Cervelo Caledonia-5</span
+            <a
+              href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
+              target="_blank"
+              class="bike__system-name text_color"
+              >Cervelo Caledonia-5</a
             >
           </li>
           <li class="bike__system">
@@ -227,8 +231,11 @@
               alt="Фото: велосипед"
               class="bike__system-foto"
             />
-            <span class="bike__system-name text_color"
-              >Cannondale Systemsix Himod</span
+            <a
+              href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
+              target="_blank"
+              class="bike__system-name text_color"
+              >Cannondale Systemsix Himod</a
             >
           </li>
           <li class="bike__system">
@@ -237,7 +244,12 @@
               alt="Фото: велосипед"
               class="bike__system-foto"
             />
-            <span class="bike__system-name text_color">Trek Domane SL-7</span>
+            <a
+              href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
+              target="_blank"
+              class="bike__system-name text_color"
+              >Trek Domane SL-7</a
+            >
           </li>
         </ul>
         <div class="bike-dot">

@@ -90,9 +90,6 @@
     padding: 80px 120px 60px 80px
     &__info
       margin-left: 50px
-      &-text
-        font-size: 20px
-        line-height: 30px
   .road
     padding: 60px 0 60px 80px
   .bike
@@ -205,27 +202,6 @@
         display: none
     &-selected
       display: block
-      width: 114px
-      height: 30px
-      background-color: #f4f4f4
-      border: 1px solid $color-border-day
-      border-radius: 2px
-      padding: 0
-      margin: 0
-      & select
-        width: 100%
-        height: 100%
-        font-style: normal
-        font-weight: 600
-        font-size: 11px
-        line-height: 14px
-        color: #151515
-        border-radius: inherit
-        background-color: inherit
-        &:focus
-          outline: none
-        & option
-          background-color: #f4f4f4
     &__systems
       justify-content: center
       margin-bottom: 20px
@@ -324,6 +300,17 @@
     &__diagonal-line
       @include diagonalLine()
       margin: 0 0 20px 0
+    &__info
+      &-text
+        font-size: 23px
+        line-height: 29px
+    &__author
+      &-name
+        font-size: 14px
+        line-height: 22px
+      &-prosport
+        font-size: 10px
+        line-height: 16px
   .road
     padding: 40px 18px
     &__diagonal-line

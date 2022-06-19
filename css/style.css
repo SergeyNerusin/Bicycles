@@ -1100,6 +1100,26 @@ template {
 
 .bike-selected {
   display: none;
+  width: 114px;
+  height: 30px;
+  background-color: #f4f4f4;
+  border: 1px solid #e3e3e3;
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 14px;
+  color: #151515;
+  padding: 0;
+  margin: 0;
+}
+
+.bike-selected:focus {
+  outline: none;
+}
+
+.bike-selected option {
+  background-color: #f4f4f4;
 }
 
 .bike__name {
@@ -1152,7 +1172,8 @@ template {
 }
 
 .bike__name-link {
-  text-decoration: none;
+  border: none;
+  background-color: transparent;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1201,6 +1222,7 @@ template {
 }
 
 .bike__system-name {
+  text-decoration: none;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -1208,6 +1230,12 @@ template {
   color: #151515;
   padding: 0;
   margin: 0;
+}
+
+.bike__system-name:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .bike__system-foto {
@@ -1697,10 +1725,6 @@ template {
   .quote__info {
     margin-left: 50px;
   }
-  .quote__info-text {
-    font-size: 20px;
-    line-height: 30px;
-  }
   .road {
     padding: 60px 0 60px 80px;
   }
@@ -1889,30 +1913,6 @@ template {
   }
   .bike-selected {
     display: block;
-    width: 114px;
-    height: 30px;
-    background-color: #f4f4f4;
-    border: 1px solid #e3e3e3;
-    border-radius: 2px;
-    padding: 0;
-    margin: 0;
-  }
-  .bike-selected select {
-    width: 100%;
-    height: 100%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 14px;
-    color: #151515;
-    border-radius: inherit;
-    background-color: inherit;
-  }
-  .bike-selected select:focus {
-    outline: none;
-  }
-  .bike-selected select option {
-    background-color: #f4f4f4;
   }
   .bike__systems {
     -webkit-box-pack: center;
@@ -2058,6 +2058,18 @@ template {
     border: 1px solid #e3e3e3;
     padding: 0;
     margin: 0 0 20px 0;
+  }
+  .quote__info-text {
+    font-size: 23px;
+    line-height: 29px;
+  }
+  .quote__author-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .quote__author-prosport {
+    font-size: 10px;
+    line-height: 16px;
   }
   .road {
     padding: 40px 18px;
