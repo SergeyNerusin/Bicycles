@@ -487,8 +487,8 @@ template {
 .menu-button__line {
   width: 100%;
   height: 2px;
-  background-color: #e3e3e3;
-  border: 1px solid #e3e3e3;
+  background-color: #151515;
+  border: 1px solid #151515;
   padding: 0;
   margin: 0;
 }
@@ -1025,16 +1025,6 @@ template {
   margin: 0;
 }
 
-.road__sign-svggrevel {
-  padding: 23px 34px 12px 16px;
-  margin: 0;
-}
-
-.road__sign-svgtt {
-  padding: 28px 34px 12px 16px;
-  margin: 0;
-}
-
 .road__buttons {
   width: 100%;
   display: -webkit-box;
@@ -1142,7 +1132,7 @@ template {
   line-height: 60px;
   letter-spacing: -0.5px;
   color: #151515;
-  padding: 0 0 0 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -1253,10 +1243,6 @@ template {
   -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
           filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
   padding: 20px;
-  margin: 0 0 22px 0;
-}
-
-.bike__system-foto:last-child {
   margin: 0;
 }
 
@@ -1273,6 +1259,8 @@ template {
   border: none;
   border-radius: 50%;
   background: #cacaca;
+  padding: 0;
+  margin: 0;
 }
 
 .bike-dot__item_active {
@@ -1688,9 +1676,6 @@ template {
     font-size: 45px;
     line-height: 50px;
   }
-  .bike__system-foto {
-    margin: 0 15px 22px 0;
-  }
   .training {
     padding: 100px 120px 60px;
   }
@@ -1915,10 +1900,16 @@ template {
     display: block;
   }
   .bike__systems {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .bike__system {
     -webkit-box-sizing: border-box;
@@ -1930,6 +1921,10 @@ template {
     background-color: #f8f8f8;
     -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
             filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+    margin-bottom: 20px;
+  }
+  .bike__system:last-child {
+    margin-bottom: 0;
   }
   .bike__system-name {
     display: block;
@@ -1943,19 +1938,6 @@ template {
     height: 254px;
     padding: 0;
     margin: 0 0 3px 0;
-  }
-  .bike__system:nth-child(2n + 1) {
-    width: 0;
-    display: none;
-  }
-  .bike-dot {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 auto;
   }
   .training {
     display: -webkit-box;
@@ -2155,6 +2137,22 @@ template {
   }
   .footer__logo {
     display: block;
+  }
+}
+
+@media (max-width: 350px) {
+  .bike__system:not(:first-child) {
+    width: 0;
+    display: none;
+  }
+  .bike-dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
