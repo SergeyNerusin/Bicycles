@@ -476,8 +476,15 @@ template {
   height: 22px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
   margin: 0;
   padding: 0;
+}
+
+.menu-button:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .menu-button_visible {
@@ -1052,6 +1059,12 @@ template {
   cursor: pointer;
 }
 
+.road__button:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
 .road__button-mob {
   width: 24px;
   height: 24px;
@@ -1243,7 +1256,7 @@ template {
   -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
           filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
   padding: 20px;
-  margin: 0;
+  margin: 0 0 22px 0;
 }
 
 .bike-dot {
@@ -1264,7 +1277,11 @@ template {
 }
 
 .bike-dot__item_active {
-  background: #151515;
+  background-color: #151515;
+}
+
+.bike-dot__item_active-night {
+  background-color: #fff;
 }
 
 /* секция Тренировки */
@@ -1404,22 +1421,6 @@ template {
   margin: 0;
 }
 
-.footer-form__input-night::-webkit-input-placeholder {
-  color: #fff;
-}
-
-.footer-form__input-night:-ms-input-placeholder {
-  color: #fff;
-}
-
-.footer-form__input-night::-ms-input-placeholder {
-  color: #fff;
-}
-
-.footer-form__input-night::placeholder {
-  color: #fff;
-}
-
 .footer-form__input::-webkit-input-placeholder {
   font-style: normal;
   font-weight: 500;
@@ -1490,6 +1491,27 @@ template {
 
 .footer-form__input:hover::placeholder {
   opacity: 1;
+}
+
+.footer-form__input-night {
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+.footer-form__input-night::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.footer-form__input-night:-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer-form__input-night::-ms-input-placeholder {
+  color: #fff;
+}
+
+.footer-form__input-night::placeholder {
+  color: #fff;
 }
 
 .footer-form__btn-submit {
@@ -2140,7 +2162,7 @@ template {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   .bike__system:not(:first-child) {
     width: 0;
     display: none;

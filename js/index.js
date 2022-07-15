@@ -43,21 +43,13 @@ const textColor = document.querySelectorAll('.text_color');
 const textColorl = document.querySelectorAll('.text_color-l');
 const textColorm = document.querySelector('.text_color-m');
 const textColorf = document.querySelector('.text_color-f');
-const textColorMob =document.querySelectorAll('.text_color-mob');
+const textColorMob = document.querySelectorAll('.text_color-mob');
 
 /* Находим селектор линии в блоке typestart */ 
 const hatchColorbgc = document.querySelector('.hatch_color-bgc');
 
-/* Находим селектора кнопок prev, next  в секции road (Дорога) */
-const btnPrev = document.querySelector('.road__button-prev');
-const btnNext = document.querySelector('.road__button-next');
-
 /* Находим селектор футера */ 
 const footerColorbgc = document.querySelector('.footer_color-bgc');
-
-/* Для установки светлой или тёмной темы */ 
-const inputColorbgc = footerColorbgc.querySelectorAll('.input_color-bgc'); 
-
 
 /* находим селектор формы */
 const formInputEmail = document.querySelector('.footer-form');
@@ -100,8 +92,43 @@ const SunImgmob = containerColorbgc.querySelector('.container-footer__sun');
 /* Находим селектор иконки - луна в контейнере с меню - для моб. устройств.*/
 const MoonImgmob = containerColorbgc.querySelector('.container-footer__moon');
 
+/* Определяем селекторы кнопок блока road */ 
+const road = document.querySelector('.road');
+const roadTitle = road.querySelector('.road__title');
+const roadParagraph = road.querySelector('.road__paragraph');
+const roadImg = road.querySelectorAll('.road__img');
+const roadBtnNext = road.querySelector('.road__button-next');
+const roadBtnNextmob = road.querySelector('.road__button-nextmob');
+const roadBtnPrev = road.querySelector('.road__button-prev');
+const roadBtnPrevmob = road.querySelector('.road__button-prevmob');
+const roadSign = road.querySelector('.road__sign-svg');
+/* Определяем селекторы кнопок и ссылок блока bike */ 
+const bike = document.querySelector('.bike');
+const btnBlock = bike.querySelector('.bike__name-items');
+const btnBike = btnBlock.querySelectorAll('.bike__name-link');
+const bikeSystemFoto = bike.querySelectorAll('.bike__system-foto');
+const bikeSystemName = bike.querySelectorAll('.bike__system-name');  
+
+/* Точки под фото */
+const bikeDot = bike.querySelectorAll('.bike-dot__item');
+
+const dataKey = Object.keys(dataBike);
+const long = Object.keys(dataBike).length - 1;
+
+/* Счетчик переключений */ 
+let count = 1;
+
+/* Кнопки в блоке Велосипеды - запоминаем индекс кнопки на которой
+   было произведено нажатие */ 
+let btnCount = 0;
+
 /* Признак для переключения темы переключения */ 
 let sign = 1;
+
+/*Выбор активного класса в зависимости от темы*/ 
+let dot = 'active';
+let countmob = 0;
+bikeDot[0].classList.add(`bike-dot__item_${dot}`);
 
 
 /* Функция добавления - удаления селектора */ 
@@ -114,13 +141,19 @@ function toggleIcons(selectSun, selectMoon){
   if(sign === 0){ 
     selectSun.src = "./images/icons/sun_theme-day.svg";
     selectMoon.src = "./images/icons/moon_theme-day.svg";
-    btnPrev.style.backgroundImage="url('../images/icons/arrow-prev.svg')";
-    btnNext.style.backgroundImage="url('../images/icons/arrow-next.svg')";
+    roadBtnPrev.style.backgroundImage="url('./images/icons/arrow-prev.svg')";
+    roadBtnNext.style.backgroundImage="url('./images/icons/arrow-next.svg')";
+    roadBtnPrevmob.style.backgroundImage="url('./images/icons/arrow-prevmob.svg')";
+    roadBtnNextmob.style.backgroundImage="url('./images/icons/arrow-nextmob.svg')";
+    btnMenuClose.style.backgroundImage="url('./images/icons/close.svg')";
   } else {
     selectSun.src = "./images/icons/sun_theme-night.svg";
     selectMoon.src = "./images/icons/moon_theme-night.svg";
-    btnPrev.style.backgroundImage="url('../images/icons/arrow-prev-white.svg')";
-    btnNext.style.backgroundImage="url('../images/icons/arrow-next-white.svg')";
+    roadBtnPrev.style.backgroundImage="url('./images/icons/arrow-prev-white.svg')";
+    roadBtnNext.style.backgroundImage="url('./images/icons/arrow-next-white.svg')";
+    roadBtnPrevmob.style.backgroundImage="url('./images/icons/arrow-prevmob-white.svg')";
+    roadBtnNextmob.style.backgroundImage="url('./images/icons/arrow-nextmob-white.svg')";
+    btnMenuClose.style.backgroundImage="url('./images/icons/close-night.svg')";
   }
 }
 
@@ -132,19 +165,24 @@ function getWhiteTheme(){
       textColorMob.forEach(el => el.style.color = "#151515");
     } 
   textColorl.forEach(el => el.style.color = "");
-  inputColorbgc.forEach(el => el.style.backgroundColor = "");
-  inputColorbgc.forEach(el => el.style.color = "");
   burgerBtnColor.forEach(el => el.style.backgroundColor = "");
   burgerBtnColor.forEach(el => el.style.border = "");
   pageColorbgc.style.backgroundColor = "";
   headerColorbgc.style.backgroundColor = "";
   hatchColorbgc.style.backgroundColor = "";
-  btnPrev.style.backgroundColor = "";
-  btnNext.style.backgroundColor = "";
+  roadBtnPrev.style.backgroundColor = "";
+  roadBtnNext.style.backgroundColor = "";
+  roadBtnPrevmob.style.backgroundColor = "";
+  roadBtnNextmob.style.backgroundColor = "";
   footerColorbgc.style.backgroundColor = "";
   containerColorbgc.style.backgroundColor = "";
   textColorm.style.color = "";
   textColorf.style.color = "";
+  dot = 'active';
+  toggleSelector(emailInput,'footer-form__input-night');
+  bikeDot[countmob].classList.remove('bike-dot__item_active');
+  bikeDot[countmob].classList.remove('bike-dot__item_active-night');
+  bikeDot[countmob].classList.add(`bike-dot__item_${dot}`);
 }
 
 /* Функция настройки тёмной темы сайта*/ 
@@ -155,19 +193,24 @@ function getDarkTheme(){
       textColorMob.forEach(el => el.style.color = "#151515");
     } 
   textColorl.forEach(el => el.style.color = "#e5e5e5");
-  inputColorbgc.forEach(el => el.style.backgroundColor = "#2f2f2f");
-  inputColorbgc.forEach(el => el.style.color = "#fff");
   burgerBtnColor.forEach(el => el.style.backgroundColor = "#fff");
   burgerBtnColor.forEach(el => el.style.border = "1px solid #fff");
   pageColorbgc.style.backgroundColor = "#2f2f2f";
   headerColorbgc.style.backgroundColor = "#333333";
   hatchColorbgc.style.backgroundColor ="#707070";
-  btnPrev.style.backgroundColor = "#434343";
-  btnNext.style.backgroundColor = "#434343";
+  roadBtnPrev.style.backgroundColor = "#434343";
+  roadBtnNext.style.backgroundColor = "#434343";
+  roadBtnPrevmob.style.backgroundColor = "#434343";
+  roadBtnNextmob.style.backgroundColor = "#434343";
   footerColorbgc.style.backgroundColor = "#2f2f2f";
   containerColorbgc.style.backgroundColor = "#333333";
   textColorm.style.color = "#e6e6e6";
   textColorf.style.color = "#565656";
+  dot = 'active-night';
+  toggleSelector(emailInput,'footer-form__input-night');
+  bikeDot[countmob].classList.remove('bike-dot__item_active');
+  bikeDot[countmob].classList.remove('bike-dot__item_active-night');
+  bikeDot[countmob].classList.add(`bike-dot__item_${dot}`);
 }
 
 /* Фукция изменения светлой темы на тёмную */ 
@@ -262,36 +305,6 @@ btnSwitchCont.addEventListener('click', () => {
   toggleThemeColor();
 });
 
-/* Определяем селекторы кнопок блока road */ 
-const road = document.querySelector('.road');
-const roadTitle = road.querySelector('.road__title');
-const roadParagraph = road.querySelector('.road__paragraph');
-const roadImg = road.querySelectorAll('.road__img');
-const roadBtnNext = road.querySelector('.road__button-next');
-const roadBtnNextmob = road.querySelector('.road__button-nextmob');
-const roadBtnPrev = road.querySelector('.road__button-prev');
-const roadBtnPrevmob = road.querySelector('.road__button-prevmob');
-const roadSign = road.querySelector('.road__sign-svg');
-/* Определяем селекторы кнопок и ссылок блока bike */ 
-const bike = document.querySelector('.bike');
-const btnBlock = bike.querySelector('.bike__name-items');
-const btnBike = btnBlock.querySelectorAll('.bike__name-link');
-const bikeSystemFoto = bike.querySelectorAll('.bike__system-foto');
-const bikeSystemName = bike.querySelectorAll('.bike__system-name');  
-
-/* Точки под фото */
-const bikeDot = bike.querySelectorAll('.bike-dot__item');
-
-
-const dataKey = Object.keys(dataBike);
-const long = Object.keys(dataBike).length - 1;
-/* Счетчик переключений */ 
-let count = 1;
-
-/* Кнопки в блоке Велосипеды - запоминаем индекс кнопки на которой
-   было произведено нажатие */ 
-let btnCount = 0;
-
 /* Для отрисовки текcта, фото и индикатора дороги  в секции Дорога */ 
 function switchDate(objectName, count) {
   function setpaddingsing(){
@@ -332,15 +345,15 @@ function switchImgmob(objectName, count) {
   bikeSystemName[0].textContent = objectName.name[count];
 } 
 
-/* Для инициализации точек под фото - в начальное положение припереключении 
+/* Для инициализации точек под фото - в начальное положение при переключении 
 типа велосипедов.
 */ 
 function getInitDot(){
   for(i = 0; i < bikeDot.length; i++){
     if(i === 0){
-      bikeDot[i].classList.add('bike-dot__item_active');
+      bikeDot[i].classList.add(`bike-dot__item_${dot}`);
     } else {
-             bikeDot[i].classList.remove('bike-dot__item_active');
+             bikeDot[i].classList.remove(`bike-dot__item_${dot}`);
            } 
   }
 }
@@ -377,8 +390,6 @@ btnBlock.addEventListener('click', (event) => {
     }
 });
 
-let countmob = 0;
-
 /* Форма select - option на мобильном */
 const selectForm = bike.querySelector('.bike-selected');
 let index = selectForm.selectedIndex;
@@ -399,25 +410,24 @@ let longmob = dataBike[dataKey[index]].bicyclesImg.length - 1;
 // console.log(getbikeSystemFotoCoordinate);
 
 bikeSystemFoto[0].addEventListener('click', function(event){
-  if (document.documentElement.clientWidth <= 350) {
+  if (document.documentElement.clientWidth <= 400) {
     let coordX = event.clientX;
-    //console.log('click');
-    bikeDot[countmob].classList.remove('bike-dot__item_active'); 
-      if(34 <= coordX && coordX <= 142){ 
-        //console.log('Prev', event.clientX);
+    bikeDot[countmob].classList.remove(`bike-dot__item_${dot}`); 
+      if(34 <= coordX && coordX <= 159){ 
+        // console.log('Prev', event.clientX);
         countmob--;
           if(countmob < 0) {
             countmob = longmob;
           }
       }
-      if(143 <= coordX && coordX <= 300){ 
-        //console.log('Next', event.clientX);
+      if(160 <= coordX && coordX <= 320){ 
+        // console.log('Next', event.clientX);
         countmob++;
           if(countmob > longmob){
             countmob = 0;
           }
       }
-    bikeDot[countmob].classList.add('bike-dot__item_active');  
+    bikeDot[countmob].classList.add(`bike-dot__item_${dot}`);  
     switchImgmob(dataBike[dataKey[index]], countmob);
   } 
 }); 

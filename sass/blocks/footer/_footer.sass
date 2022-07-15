@@ -30,8 +30,6 @@
       background-color: $color-footer-bgc-day
       padding: 11px 22px 11px 20px
       margin: 0
-      &-night::placeholder
-        color: $color-title-text-night
       &::placeholder
         font-style: normal
         font-weight: 500
@@ -46,6 +44,11 @@
       &:hover
         &::placeholder
           opacity: 1
+      &-night
+        background-color: $color-footer-bgc-night
+        color: $color-title-text-night
+      &-night::placeholder
+        color: $color-title-text-night
     &__btn
       &-submit
         display: none
