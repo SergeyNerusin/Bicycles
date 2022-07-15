@@ -1,0 +1,54 @@
+.training
+  box-sizing: border-box
+  width: 100%
+  padding: 150px 120px 120px 120px
+  position: relative
+  margin: 0 auto
+  &__diagonal-line
+    display: none
+  &__title
+    width: 38.34%
+    @include textTitle()
+    padding: 0
+    margin: 0 0 50px 0
+  &__foto
+    display: block
+    width: 40.28%
+    height: auto
+    object-fit: cover
+    object-position: center
+    position: absolute
+    top: 150px
+    right: 120px
+    margin: 0
+    padding: 0
+  &__paragraph
+    width: 38.34%
+    @include textParagraph()
+    padding: 0
+    margin: 0 0 182px 0
+  &__programs
+    width: 38.34%
+    display: flex
+    justify-content: flex-start
+    list-style-type: none
+    padding: 0
+    margin: 0
+  &__program
+    align-self: flex-end
+    padding: 0
+    margin: 0 30px 0 0
+    &-link
+      padding: 0
+      margin: 0
+      text-decoration: none
+      font-style: normal
+      font-weight: 600
+      font-size: 18px
+      line-height: 28px
+      color: $color-link-day
+      transition: opacity 0.3s
+    &-link:hover
+      opacity: 0.6
+  &__program:last-child
+    margin: 0

@@ -1,0 +1,123 @@
+.bike
+  box-sizing: border-box
+  width: 100%
+  margin: 0 auto
+  padding: 60px 120px
+  &__diagonal-line
+    display: none
+  &-selected
+    display: none
+    width: 114px
+    height: 30px
+    background-color: $color-background-day
+    border: 1px solid $color-border-day
+    border-radius: 2px
+    font-style: normal
+    font-weight: 600
+    font-size: 11px
+    line-height: 14px
+    color: #151515
+    padding: 0
+    margin: 0
+    &:focus
+      outline: none
+    & option
+      background-color: $color-background-day
+  &__name
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding: 0
+    margin: 0 0 120px 0
+    &-title
+      width: 460px
+      @include textTitle()
+      padding: 0
+      margin: 0
+    &-items
+      width: 100%
+      list-style-type: none
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      padding: 0
+      margin: 0
+    &-item
+      padding: 0
+      margin: 0 40px 0 0
+      &:last-child
+        margin: 0
+    &-link
+      border: none
+      background-color: transparent
+      font-style: normal
+      font-weight: 400
+      font-size: 18px
+      line-height: 28px
+      color: $color-link-day
+      opacity: 0.7
+      cursor: pointer
+      padding: 0
+      margin: 0
+      &:hover
+        opacity: 0.6
+        transition: opacity 0.3s linear
+      &_selected
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 28px
+        opacity: 1
+        color: $color-linkselected-day
+  &__systems
+    width: 100%
+    list-style-type: none
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding: 0
+    margin: 0
+  &__system
+    padding: 0
+    margin: 0
+    &-name
+      text-decoration: none
+      font-style: normal
+      font-weight: 600
+      font-size: 18px
+      line-height: 22px
+      color: $color-title-text-day
+      padding: 0
+      margin: 0
+    &-name:hover
+      opacity: 0.6
+      transition: opacity 0.3s linear
+    &-foto
+      box-sizing: border-box
+      display: block
+      width: 380px
+      height: 380px
+      background-color: $color-background-day
+      border-radius: 20px
+      object-fit: contain
+      object-position: center
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06))
+      padding: 20px
+      margin: 0 0 22px 0
+  &-dot
+    display: none
+    width: 22px
+    padding: 0
+    margin: 0
+    &__item
+      width: 4px
+      height: 4px
+      border: none
+      border-radius: 50%
+      background: $color-dot-noactive
+      padding: 0
+      margin: 0
+      &_active
+        background-color: $color-dot-active-day
+      &_active-night
+        background-color: #fff

@@ -1,0 +1,86 @@
+.road
+  width: 100%
+  box-sizing: border-box
+  padding: 60px 0 60px 120px
+  margin: 0 auto
+  &__diagonal-line
+    display: none
+  &__container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0
+    margin: 0 0 50px 0
+  &__title
+    width: 460px
+    @include textTitle
+    text-align: left
+    padding: 0
+    margin: 0
+  &__wrapper
+    width: 100%
+    padding: 0
+    margin: 0
+  &__paragraph
+    width: 460px
+    @include textParagraph()
+    text-align: left
+    padding: 0
+    margin: 0 0 80px 0
+  &__foto
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding: 0
+    margin: 0 0 67px 0
+    position: relative
+  &__img
+    width: calc(50% - 10px)
+    height: auto
+    object-fit: cover
+    object-position: center
+  &__sign
+    width: 100px
+    height: 40px
+    position: absolute
+    left: 0
+    bottom: 16px
+    background-image: url('../images/icons/substrate-for-line.png')
+    background-repeat: no-repeat
+    &-svg
+      padding: 12px 34px 12px 16px
+      margin: 0
+  &__buttons
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    &-mob
+      display: none
+  &__button
+    width: 50px
+    height: 50px
+    padding: 0
+    margin: 0
+    border: 0
+    background-color: $btn-background-day
+    background-repeat: no-repeat
+    background-position: center
+    border-radius: 50px
+    cursor: pointer
+    &:hover
+      opacity: 0.6
+      transition: opacity 0.3s linear
+    &-mob
+      width: 24px
+      height: 24px
+    &-prev
+      background-image: url('../images/icons/arrow-prev.svg')
+      margin-right: 20px
+    &-prevmob
+      background-image: url('../images/icons/arrow-prevmob.svg')
+      margin-right: 10px
+    &-next
+      background-image: url('../images/icons/arrow-next.svg')
+    &-nextmob
+      background-image: url('../images/icons/arrow-nextmob.svg')

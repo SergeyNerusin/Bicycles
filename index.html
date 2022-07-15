@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Велосипеды</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="page page_color-bgc">
+    <header class="header header_color-bgc">
+      <nav class="menu">
+        <ul class="menu__items menu__items_visible">
+          <li class="menu__item">
+            <a href="#roads" class="menu__link text_color"
+              >Покрытия и градиенты</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#bicycles" class="menu__link text_color">Велосипеды</a>
+          </li>
+          <li class="menu__item">
+            <a href="#velo-training" class="menu__link text_color"
+              >Тренировки</a
+            >
+          </li>
+        </ul>
+        <button type="button" class="menu-button menu-button_visible">
+          <span class="menu-button__line button_color-bgc"></span>
+          <span class="menu-button__line button_color-bgc"></span>
+          <span class="menu-button__line button_color-bgc"></span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <!-- Для открытия меню бургера на мобильных устройствах -->
+      <section class="container container_color-bgc">
+        <button type="button" class="container__close"></button>
+        <div class="container-menu">
+          <ul class="container-menu__items">
+            <li class="container-menu__item">
+              <a
+                href="#roads"
+                class="container-menu__link text_color"
+                onclick="toggleSelector(containerColorbgc,'container_opened')"
+                >Покрытия и градиенты</a
+              >
+            </li>
+            <li class="container-menu__item">
+              <a
+                href="#bicycles"
+                class="container-menu__link text_color"
+                onclick="toggleSelector(containerColorbgc,'container_opened')"
+                >Велосипеды</a
+              >
+            </li>
+            <li class="container-menu__item">
+              <a
+                href="#velo-training"
+                class="container-menu__link text_color"
+                onclick="toggleSelector(containerColorbgc,'container_opened')"
+                >Тренировки</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="container-footer">
+          <img
+            src="./images/icons/sun_theme-day.svg"
+            alt="Иконка: Солнышко"
+            class="container-footer__sun"
+          />
+          <button type="button" class="container-footer__btn"></button>
+          <img
+            src="./images/icons/moon_theme-day.svg"
+            alt="Иконка: Луна"
+            class="container-footer__moon"
+          />
+        </div>
+      </section>
+      <!-- Шоссе, ТТ и Грэвел -->
+      <section class="typestart">
+        <h1 class="typestart__title text_color">Шоссе, ТТ и&nbsp;Грэвел</h1>
+        <div class="typestart-container">
+          <img
+            src="./images/forest.png"
+            alt="Фото: Лесная дорога "
+            class="typestart-container__foto-way"
+          />
+          <div class="typestart-container__limiter">
+            <img
+              src="./images/sys-cannondaleSystemsix.png"
+              alt="Фото: Велосипед "
+              class="typestart-container__foto-bike"
+            />
+          </div>
+        </div>
+        <div class="typestart-info">
+          <p class="typestart-info__paragraph text_color-m">
+            Триатлонные старты, горные серпантины или грейвел заезды по
+            живописным маршрутам – нужно только определиться с выбором
+            велосипеда и отправиться в путь.
+          </p>
+          <a href="#" class="typestart-info__link">
+            <span class="typestart-info__link-text">Подробнее</span>
+          </a>
+          <div class="typestart-info__system">
+            <span class="typestart-info__system-text text_color"
+              >Cannondale&nbsp;Systemsix</span
+            >
+            <span class="typestart-info__system-hatch hatch_color-bgc"></span>
+          </div>
+        </div>
+      </section>
+      <section class="quote">
+        <hr class="quote__diagonal-line" />
+        <img
+          class="quote__foto"
+          src="./images/road-hills.png"
+          alt="Фото: Холмы и дорога"
+        />
+        <div class="quote__info">
+          <p class="quote__info-text text_color">
+            «Катайся много или мало, долго или коротко, как хочешь - но катайся»
+          </p>
+          <div class="quote__author">
+            <span class="quote__author-name text_color">Эдди Меркс</span>
+            <span class="quote__author-profsport text_color-l">Велогонщик</span>
+          </div>
+        </div>
+      </section>
+      <!-- секция Дорога -->
+      <section id="roads" class="road">
+        <hr class="road__diagonal-line" />
+        <div class="road__container">
+          <h2 class="road__title text_color">Шоссе</h2>
+          <div class="road__buttons-mob">
+            <button
+              type="button"
+              class="road__button road__button-mob road__button-prevmob"
+            ></button>
+            <button
+              type="button"
+              class="road__button road__button-mob road__button-nextmob"
+            ></button>
+          </div>
+        </div>
+        <div class="road__wrapper">
+          <p class="road__paragraph text_color-l">
+            На шоссейном велосипеде можно ездить по асфальту на разных
+            градиентах: будь то горы или равнины. Гонки проходят в командном
+            пелотоне, но тренироваться можно и самостоятельно.
+          </p>
+          <div class="road__foto">
+            <img
+              class="road__img"
+              src="./images/road-mountain.png"
+              alt="фото: Дорога шоссе"
+            />
+            <img
+              class="road__img"
+              src="./images/road-country.png"
+              alt="фото: Дорога просёлочная"
+            />
+            <!-- признак дороги -->
+            <div class="road__sign">
+              <img
+                class="road__sign-svg"
+                src="./images/icons/line-curve.svg"
+                alt="Линия - индикатор"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- кнопки -->
+        <div class="road__buttons">
+          <button type="button" class="road__button road__button-prev"></button>
+          <button type="button" class="road__button road__button-next"></button>
+        </div>
+      </section>
+      <!-- Секция Велосипеды -->
+      <section id="bicycles" class="bike">
+        <hr class="bike__diagonal-line" />
+        <div class="bike__name">
+          <h2 class="bike__name-title text_color">Велосипеды</h2>
+          <form>
+            <select class="bike-selected">
+              <option value="0">Шоссе</option>
+              <option value="1">Гревел</option>
+              <option value="2">TT</option>
+            </select>
+          </form>
+          <ul class="bike__name-items">
+            <li class="bike__name-item">
+              <button
+                type="button"
+                class="bike__name-link text_color bike__name-link_selected"
+              >
+                Шоссе
+              </button>
+            </li>
+            <li class="bike__name-item">
+              <button type="button" class="bike__name-link text_color-l">
+                Грэвел
+              </button>
+            </li>
+            <li class="bike__name-item">
+              <button type="button" class="bike__name-link text_color-l">
+                ТТ
+              </button>
+            </li>
+          </ul>
+        </div>
+        <ul class="bike__systems">
+          <li class="bike__system">
+            <img
+              src="./images/sys-cerveloCaledon.png"
+              alt="Фото: велосипед"
+              class="bike__system-foto"
+            />
+            <a
+              href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
+              target="_blank"
+              class="bike__system-name text_color-mob"
+              >Cervelo Caledonia-5</a
+            >
+          </li>
+          <li class="bike__system">
+            <img
+              src="./images/sys-cannondaleSystemsix.png"
+              alt="Фото: велосипед"
+              class="bike__system-foto"
+            />
+            <a
+              href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
+              target="_blank"
+              class="bike__system-name text_color-mob"
+              >Cannondale Systemsix Himod</a
+            >
+          </li>
+          <li class="bike__system">
+            <img
+              src="./images/sys-trekDomane.png"
+              alt="Фото: велосипед"
+              class="bike__system-foto"
+            />
+            <a
+              href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
+              target="_blank"
+              class="bike__system-name text_color-mob"
+              >Trek Domane SL-7</a
+            >
+          </li>
+        </ul>
+        <div class="bike-dot">
+          <span class="bike-dot__item"></span>
+          <span class="bike-dot__item"></span>
+          <span class="bike-dot__item"></span>
+        </div>
+      </section>
+      <!-- Секция Тренировки -->
+      <section id="velo-training" class="training">
+        <hr class="training__diagonal-line" />
+        <h2 class="training__title text_color">Тренировки</h2>
+        <img
+          class="training__foto"
+          src="./images/road-uphill.png"
+          alt="Фото: подъём дороги"
+        />
+        <p class="training__paragraph text_color-l">
+          Чтобы найти маршрут для тренировки можно воспользоваться сервисом
+          Komoot, а записать эти тренировки поможет приложение Strava, а также
+          это приложение позволит построить тренировочный план.
+        </p>
+        <ul class="training__programs">
+          <li class="training__program">
+            <a
+              href="https://www.strava.com"
+              class="training__program-link text_color"
+              >Strava</a
+            >
+          </li>
+          <li class="training__program">
+            <a
+              href="https://www.komoot.com"
+              target="_blank"
+              class="training__program-link text_color"
+              >Komoot</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer footer_color-bgc">
+      <h2 class="footer__title text_color">Подпишитесь на рассылку&nbsp;—</h2>
+      <form action="#" name="getemail" class="footer-form">
+        <input
+          class="footer-form__input"
+          type="email"
+          name="input-email"
+          id="input-email"
+          placeholder="Ваш e-mail"
+          required
+        />
+        <button class="footer-form__btn-submit text_color" type="submit">
+          ok
+        </button>
+      </form>
+      <div class="footer__wrapper">
+        <p class="footer__copyright text_color-f">
+          ©&nbsp;Road&nbsp;Club&nbsp;2021
+        </p>
+        <div class="footer__container">
+          <img
+            src="./images/icons/sun_theme-day.svg"
+            alt="Иконка: Солнышко"
+            class="footer__container-sun"
+          />
+          <button type="button" class="footer__container-btn"></button>
+          <img
+            src="./images/icons/moon_theme-day.svg"
+            alt="Иконка: Луна"
+            class="footer__container-moon"
+          />
+        </div>
+        <img
+          class="footer__logo"
+          src="./images/icons/logo.svg"
+          alt="Логотип - ведущая шестерня велосипеда"
+        />
+      </div>
+    </footer>
+    <script src="./js/index.js" defer></script>
+  </body>
+</html>
